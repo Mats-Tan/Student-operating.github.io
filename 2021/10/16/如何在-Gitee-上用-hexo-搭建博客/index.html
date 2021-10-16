@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>如何在 Gitee 上用 hexo 搭建博客 | Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="如何在 Gitee 上用 hexo 搭建博客 我的电脑环境： OS：win10  博客环境安装与配置我使用的工具  git bash  使用目的：使用其自带的 git 工具   nood.js  使用目的：  hexo 是基于 nood.js 环境的博客环境，必须要安装 nood.js 使用 nood.js 中的 npm 工具    npm  使用目的：使用 npm 工具下载 cnpm 工具">
+<meta property="og:type" content="article">
+<meta property="og:title" content="如何在 Gitee 上用 hexo 搭建博客">
+<meta property="og:url" content="http://example.com/2021/10/16/%E5%A6%82%E4%BD%95%E5%9C%A8-Gitee-%E4%B8%8A%E7%94%A8-hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="如何在 Gitee 上用 hexo 搭建博客 我的电脑环境： OS：win10  博客环境安装与配置我使用的工具  git bash  使用目的：使用其自带的 git 工具   nood.js  使用目的：  hexo 是基于 nood.js 环境的博客环境，必须要安装 nood.js 使用 nood.js 中的 npm 工具    npm  使用目的：使用 npm 工具下载 cnpm 工具">
+<meta property="og:locale" content="en_US">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715240.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161536620.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160746291.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160747739.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160747591.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161536563.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161536294.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160751640.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715355.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160754313.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110160754537.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715536.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715264.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161016308.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715424.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715371.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161536468.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715902.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715116.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715378.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715650.png">
+<meta property="og:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715704.png">
+<meta property="article:published_time" content="2021-10-16T09:15:33.000Z">
+<meta property="article:modified_time" content="2021-10-16T09:15:59.814Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+<meta name="twitter:image" content="https://gitee.com/tan-huiyu/pic/raw/master/202110161715240.png">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 5.4.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-如何在-Gitee-上用-hexo-搭建博客" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2021/10/16/%E5%A6%82%E4%BD%95%E5%9C%A8-Gitee-%E4%B8%8A%E7%94%A8-hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" class="article-date">
+  <time class="dt-published" datetime="2021-10-16T09:15:33.000Z" itemprop="datePublished">2021-10-16</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+      <header class="article-header">
+        
+  
+    <h1 class="p-name article-title" itemprop="headline name">
+      如何在 Gitee 上用 hexo 搭建博客
+    </h1>
+  
+
+      </header>
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="如何在-Gitee-上用-hexo-搭建博客"><a href="#如何在-Gitee-上用-hexo-搭建博客" class="headerlink" title="如何在 Gitee 上用 hexo 搭建博客"></a>如何在 Gitee 上用 hexo 搭建博客</h1><blockquote>
+<p>我的电脑环境：</p>
+<p>OS：win10</p>
+</blockquote>
+<h2 id="博客环境安装与配置"><a href="#博客环境安装与配置" class="headerlink" title="博客环境安装与配置"></a>博客环境安装与配置</h2><h3 id="我使用的工具"><a href="#我使用的工具" class="headerlink" title="我使用的工具"></a>我使用的工具</h3><blockquote>
+<ul>
+<li><p><strong>git bash</strong></p>
+<blockquote>
+<p>使用目的：使用其自带的 git 工具</p>
+</blockquote>
+</li>
+<li><p><strong>nood.js</strong></p>
+<blockquote>
+<p>使用目的：</p>
+<ol>
+<li>hexo 是基于 nood.js 环境的博客环境，必须要安装 nood.js</li>
+<li>使用 nood.js 中的 <strong>npm</strong> 工具</li>
+</ol>
+</blockquote>
+</li>
+<li><p><strong>npm</strong></p>
+<blockquote>
+<p>使用目的：使用 npm 工具下载 cnpm 工具</p>
+</blockquote>
+</li>
+<li><p><strong>cnpm</strong></p>
+<blockquote>
+<p>使用目的：下载 hexo 环境配置</p>
+</blockquote>
+</li>
+<li><p><strong>hexo</strong></p>
+<blockquote>
+<p>使用目的：快速生成 hexo 博客环境</p>
+</blockquote>
+</li>
+<li><p><strong>Typora</strong></p>
+<blockquote>
+<p>使用目的：写博客用的 md 文件编辑器</p>
+</blockquote>
+</li>
+</ul>
+</blockquote>
+<h3 id="工具准备"><a href="#工具准备" class="headerlink" title="工具准备"></a>工具准备</h3><h4 id="Git-Bash"><a href="#Git-Bash" class="headerlink" title="Git Bash"></a>Git Bash</h4><p><strong>Git Bash</strong> 是一个类似于 Linux 的终端，常见的操作是用来项目管理，可以向网络上的仓库上传和拉取内容，也可以建立分支进行管理。</p>
+<p><strong>下载地址</strong>：<a target="_blank" rel="noopener" href="https://gitforwindows.org/">https://gitforwindows.org/</a></p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715240.png" alt="image-20211016072802943" style="zoom: 67%;" /> 
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161536620.png" alt="image-20211016072841954" style="zoom:67%;" /> <strong>我已经安装过了所以会显示这个界面，没有安装过的同学不断 next 就可以。</strong></p>
+<h4 id="Typora"><a href="#Typora" class="headerlink" title="Typora"></a>Typora</h4><p><strong>Typora</strong> 是一个轻量化的 md 文件编辑器，支持 markdown 语法， 能够便捷的进行文件的书写和样式美化</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="https://www.typora.net/">https://www.typora.net/</a></p>
+<p>使用 Typora 需要学习 <code>markdown 语法</code> ，这里推荐一个很好的学习地址，只需要 数 10 分钟就能基本掌握 markdown 语法</p>
+<p>教程地址：<a target="_blank" rel="noopener" href="https://markdown.com.cn/basic-syntax/">https://markdown.com.cn/basic-syntax/</a></p>
+<h4 id="nood-js"><a href="#nood-js" class="headerlink" title="nood.js"></a>nood.js</h4><p><strong>nood.js</strong> 选择于自己操作系统相同的安装包进行安装。</p>
+<p>下载地址：<a target="_blank" rel="noopener" href="http://nodejs.cn/download/">http://nodejs.cn/download/</a></p>
+<blockquote>
+<p>右击桌面上的 “此电脑” ，查看 “属性” 可以知道自己电脑的系统类型</p>
+</blockquote>
+<p>安装结束后，打开 git （或 cmd ），输入：<code>node -v</code> 检查安装是否成功</p>
+<blockquote>
+<p><strong>cmd</strong></p>
+<hr>
+<blockquote>
+<ol>
+<li><p><code>win+R</code></p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160746291.png" alt="image-20211016074644253" style="zoom: 67%;" /> </li>
+<li><p>输入 <code>cmd</code> </p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160747739.png" alt="image-20211016074705706" style="zoom:67%;" /> <img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160747591.png" style="zoom: 33%;" /> </p>
+</li>
+<li><p>输入 <code>node -v</code></p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161536563.png">如果这里显示的没有类似于 <strong>v14.17.6</strong> 这样的版本号，则安装失败</p>
+</li>
+<li><p>输入 <code>npm -v</code></p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161536294.png" alt="image-20211016075316889"> 如果没有类似图片这样的版本号，则安装失败</p>
+</li>
+</ol>
+</blockquote>
+<p><strong>git</strong></p>
+<hr>
+<blockquote>
+<ol>
+<li>任意处右击鼠标（或双击 git 打开方式）</li>
+</ol>
+<p>   <img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160751640.png" alt="image-20211016075106610" style="zoom:67%;" /> <img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715355.png"> </p>
+<ol start="2">
+<li><p>输入 <code>node -v</code> 和 <code>npm -v</code></p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160754313.png" alt="image-20211016075425290" style="zoom:67%;" /> <img src="https://gitee.com/tan-huiyu/pic/raw/master/202110160754537.png" alt="image-20211016075439511" style="zoom:67%;" /></p>
+<p>结果和 cmd 是一样的</p>
+</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="cnpm"><a href="#cnpm" class="headerlink" title="cnpm"></a>cnpm</h4><p><strong>cnpm</strong> 属于 npm 在中国的一个拓展，因为在国内使用 npm 访问失败率高。</p>
+<blockquote>
+<p> 安装 cnpm</p>
+<hr>
+<p> 任意打开 cmd （或 git bash），输入以下内容：</p>
+<p> <code>npm install -g cnpm --registry=https://registry.npm.taobao.org</code></p>
+<p> 输入结束后回车等待，当显示类似于以下消息：</p>
+<p> <code>C:\xxx\xxx\npm\cnpm -&gt; C:\xxx\xxx\bin\cnpm</code> ，表示安装成功。</p>
+</blockquote>
+<h4 id="hexo"><a href="#hexo" class="headerlink" title="hexo"></a>hexo</h4><p><strong>hexo</strong> 是一种简洁的<strong>博客框架</strong>，使用 <strong>markdown 语法</strong>生成 <strong>静态网页</strong>。</p>
+<blockquote>
+<h5 id="安装-hexo"><a href="#安装-hexo" class="headerlink" title="安装 hexo"></a>安装 hexo</h5><ol>
+<li>使用 <strong>cnpm</strong> 安装 <strong>hexo</strong></li>
+</ol>
+<p>命名：<code>cnpm install -g hexo-cli</code> </p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715536.png" alt="21" style="zoom: 67%;" /> 
+
+<p>（图片转载自：CSDN：jiuqi_玖柒）</p>
+<ol start="2">
+<li><p>验证是否安装成功</p>
+<p><code>hexo -v</code></p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715264.png" alt="image-20211016095205514" style="zoom:67%;" /> 这是成功后的版本信息</p>
+</li>
+<li><p>初始化 hexo </p>
+<ol>
+<li>创建一个空文件夹</li>
+<li>进入文件夹右击鼠标，打开 git bash</li>
+<li>输入：<code>hexo init</code></li>
+<li>成功后文件夹中会生成很多文件</li>
+</ol>
+</li>
+<li><p>运行 hexo</p>
+<p>命令：<code>hexo s</code> ——启动本地博客</p>
+<p>命令：<code>CTRL+C</code> ——停止本地博客</p>
+<blockquote>
+<p>启动本地博客后可以在浏览器地址栏输入 <code>localhost:4000</code> 预览</p>
+</blockquote>
+</li>
+<li><p>hexo 常用命令</p>
+<ol>
+<li><p>创建新文章</p>
+<p><code>hexo new &quot;title&quot;</code> 双引号内的内容是我的文章标题，可以随意修改。</p>
+<blockquote>
+<p>创建成功的文章会保存在：<code>/source/_posts/</code> </p>
+<p>文件的格式是 <code>.md</code></p>
+<p>文章可以用 <strong>typora</strong> 进行编辑</p>
+</blockquote>
+</li>
+<li><p>清除博客缓存</p>
+<p>命令：<code>hexo clean</code> </p>
+<p>使用场景：切换博客主题等需要对全局配置进行修改时</p>
+</li>
+<li><p>将 <code>.md</code> 文件生成静态页面</p>
+<p>命令：<code>hexo g</code> </p>
+<p>使用场景：完成 <code>.md</code> 文件的编辑后</p>
+</li>
+</ol>
+</li>
+</ol>
+</blockquote>
+<h2 id="连接本地博客到-Gitee-仓库"><a href="#连接本地博客到-Gitee-仓库" class="headerlink" title="连接本地博客到 Gitee 仓库"></a>连接本地博客到 Gitee 仓库</h2><ol>
+<li><p>在 Gitee 创建仓库</p>
+<ol>
+<li><p>进入 Gitee，地址：<a target="_blank" rel="noopener" href="https://gitee.com/">https://gitee.com/</a></p>
+</li>
+<li><p>右上角加号创建仓库</p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161016308.png" alt="image-20211016101647229" style="zoom: 50%;" />  
+
+<blockquote>
+<p><strong>注意：</strong></p>
+<ol>
+<li><p>仓库名称要填写自己的用户名</p>
+<blockquote>
+<p>如果用其他名称，那么无法用自己的仓库名直接访问，需要通过用户名间接访问</p>
+</blockquote>
+</li>
+<li><p>开源</p>
+</li>
+<li><p>设置模板</p>
+</li>
+</ol>
+</blockquote>
+</li>
+</ol>
+</li>
+<li><p>安装 <code>hexo-deployer-git</code> 插件，用于设置远程仓库</p>
+<p>命令：<code>cnpm install --save hexo-deployer-git</code> </p>
+</li>
+<li><p>设置远程仓库</p>
+<p>在文件中找到 <code>_config.yml</code> 做出以下修改：</p>
+<blockquote>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715424.png" alt="image-20211016102536678" style="zoom:67%;" /> <strong>仓库的名字与用户名一致</strong></p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715371.png" alt="img"> 注意：<code>type:</code>后一定要留空格，这里会监测缩进</p>
+</blockquote>
+</li>
+<li><p>部署到远端的 Gitee</p>
+<ol>
+<li><p>部署到远端的码云仓库</p>
+<p>命令：<code>hexo d</code></p>
+</li>
+<li><p>设置 <strong>user.email</strong> 和 <strong>user.name</strong> </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置你登陆码云的邮箱账号</span></span><br><span class="line">git config --global user.email <span class="string">&quot;@.com&quot;</span>   填写码云用的邮箱</span><br></pre></td></tr></table></figure>
+
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">#设置你登陆码云的名字</span></span><br><span class="line">git config --global user.name <span class="string">&quot;用户名&quot;</span>	填写自己用户名</span><br></pre></td></tr></table></figure></li>
+</ol>
+</li>
+<li><p>开启静态页面服务：<strong>Gitee Pages</strong> </p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161536468.png" alt="image-20211016103522665" style="zoom:67%;" /> 
+
+<p>进入仓库，点击 <strong>Gitee Pages</strong> ，实名后即可启用，并获得自己的网站地址</p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715902.png" alt="image-20211016103724151"></p>
+</li>
+<li><p>输入网址即可查看自己的博客了</p>
+<p><a target="_blank" rel="noopener" href="http://tan-huiyu.gitee.io/">http://tan-huiyu.gitee.io</a></p>
+<p>（这是我的网址欢迎访问，以后还会至少更新两年，包括C、Java、数据结构、maven、git等学习笔记）</p>
+</li>
+</ol>
+<h2 id="设置图床"><a href="#设置图床" class="headerlink" title="设置图床"></a>设置图床</h2><h3 id="图床的作用是什么呢？"><a href="#图床的作用是什么呢？" class="headerlink" title="图床的作用是什么呢？"></a>图床的作用是什么呢？</h3><p>​    我在写博客的过程中带有图片是十分常见的，但是图片的体积很大，如果都存储在博客的框架资源中，会很占用我每次的上传和加载运行，所以我选择使用<strong>图床</strong>。</p>
+<p>​    虽然听起来是个新鲜的名词，但其实就像我在前面的操作，将代码上传到 Gitee 一样，我也可以将图片上传的 Gitee 来存储，每次访问界面的图片就可以来自于网络了，当然如果付费可以选择阿里、七牛等存储效果更好的地址。</p>
+<p>​    接下来让我展示一下，如何用 <strong>PicGo + Typora</strong> 的形式来进行博客图片的实时上传存储。</p>
+<h3 id="PicGo"><a href="#PicGo" class="headerlink" title="PicGo"></a>PicGo</h3><blockquote>
+<p>链接：<a target="_blank" rel="noopener" href="https://pan.baidu.com/s/1qjqx6gpanLv22diH9NQwVw">https://pan.baidu.com/s/1qjqx6gpanLv22diH9NQwVw</a><br>提取码：edlv<br>–来自百度网盘超级会员V4的分享</p>
+</blockquote>
+<p>要使用 <strong>PicGo</strong> 在 <strong>Gitee</strong> 进行图片的云管理，还需要一个 PicGo 插件 <strong>github-plus</strong> </p>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715116.png" alt="image-20211016112817109" style="zoom:67%;" /> 可以直接搜索下载</p>
+<p>​                    </p>
+<p>进入 <strong>githubPlus</strong> 进行设置</p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715378.png" alt="img" style="zoom:67%;" /> 
+
+<blockquote>
+<p>如何获得<strong>私人令牌</strong></p>
+<ol>
+<li>进入 gitee 网页</li>
+<li>右上角点击，找到设置</li>
+<li>在设置的左侧菜单中找到<strong>私人令牌</strong></li>
+<li>生成令牌</li>
+<li>复制令牌</li>
+</ol>
+</blockquote>
+<p>修改 Typora 设置</p>
+<blockquote>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715650.png"> </p>
+<ol>
+<li>选择上传图片</li>
+<li>对网络位置的图片应用上述规则</li>
+<li>上传服务选择 PicGo（app）</li>
+<li>选择对应路径</li>
+</ol>
+</blockquote>
+<p>现在就可以用 Typora + 图床，进行博客编辑了。</p>
+<h2 id="写一篇博客并上传的流程"><a href="#写一篇博客并上传的流程" class="headerlink" title="写一篇博客并上传的流程"></a>写一篇博客并上传的流程</h2><h3 id="写博客"><a href="#写博客" class="headerlink" title="写博客"></a>写博客</h3><p>两种方式</p>
+<ol>
+<li><code>hexo new &quot;name&quot;</code></li>
+<li>在文件夹 <code>source/_posts/</code> 中添加新的 <code>.md</code> 文件</li>
+</ol>
+<h3 id="清除缓存"><a href="#清除缓存" class="headerlink" title="清除缓存"></a>清除缓存</h3><ol>
+<li>执行 <code>hexo clean</code> 清除缓存</li>
+<li>执行 <code>hexo g</code> 重写渲染静态页面</li>
+</ol>
+<h3 id="推送到码云"><a href="#推送到码云" class="headerlink" title="推送到码云"></a>推送到码云</h3><p>推送命令： <code>hexo d</code> </p>
+<h3 id="前往码云，更新界面"><a href="#前往码云，更新界面" class="headerlink" title="前往码云，更新界面"></a>前往码云，更新界面</h3><p>在推送完成后，前往 <strong>Gitee Pages</strong> 点击更新</p>
+<img src="https://gitee.com/tan-huiyu/pic/raw/master/202110161715704.png" alt="image-20211016152548108" style="zoom:67%;" /> 
+
+
+
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2021/10/16/%E5%A6%82%E4%BD%95%E5%9C%A8-Gitee-%E4%B8%8A%E7%94%A8-hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/" data-id="ckutle22b0001fwu6f7qthy6z" data-title="如何在 Gitee 上用 hexo 搭建博客" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+  
+    <a href="/2021/10/16/hello-world/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title">Hello World</div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2021/10/">October 2021</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2021/10/16/%E5%A6%82%E4%BD%95%E5%9C%A8-Gitee-%E4%B8%8A%E7%94%A8-hexo-%E6%90%AD%E5%BB%BA%E5%8D%9A%E5%AE%A2/">如何在 Gitee 上用 hexo 搭建博客</a>
+          </li>
+        
+          <li>
+            <a href="/2021/10/16/hello-world/">Hello World</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2021 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
