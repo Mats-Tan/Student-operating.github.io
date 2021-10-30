@@ -1,0 +1,1257 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        Hexo
+    </title>
+    <meta name="description" content= 嘿，我是零壹，这里是我的主站，现在只有博客，但是以后会有更多内容 >
+    <meta name="keywords" content= Blog,Hexo,Theme,刘训灼,LiuXunzhuo >
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            数据结构预习
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <p>[toc]</p>
+<h1 id="《数据结构（C语言版）》读书记录"><a href="#《数据结构（C语言版）》读书记录" class="headerlink" title="《数据结构（C语言版）》读书记录"></a>《数据结构（C语言版）》读书记录</h1><p><strong>使用的书籍：</strong></p>
+<ol>
+<li><p><strong>《数据结构（C语言版）》 严蔚敏 吴伟民 编著</strong></p>
+</li>
+<li><p><strong>《数据结构与算法之美》</strong></p>
+</li>
+</ol>
+<p><strong>说明：</strong></p>
+<p>​    <strong>“引用”语法的内容为原书摘录</strong></p>
+<h2 id="绪论"><a href="#绪论" class="headerlink" title="绪论"></a>绪论</h2><blockquote>
+<p>为了编写出一个“好”的程序，必须分析待处理的对象的特性以及各处理对象间存在的关系。</p>
+</blockquote>
+<h3 id="什么是数据结构？"><a href="#什么是数据结构？" class="headerlink" title="什么是数据结构？"></a><strong>什么是数据结构？</strong></h3><blockquote>
+<ol>
+<li><p>数据结构是一门专门<strong>研究非数值计算的程序设计问题</strong>中计算机的<strong>操作对象以及它们之间的关系和操作</strong>等的学科</p>
+</li>
+<li><p>人们认为<strong>程序设计的实质是对确定的问题选择一种好的结构，加上设计一种好的算法</strong>。</p>
+</li>
+<li><p>可以认为<strong>数据结构是介于计算机硬件、计算机软件与数学三者之间的一门核心课程</strong></p>
+</li>
+</ol>
+</blockquote>
+<h3 id="基本概念与术语："><a href="#基本概念与术语：" class="headerlink" title="基本概念与术语："></a><strong>基本概念与术语：</strong></h3><blockquote>
+<p><strong>data</strong></p>
+<blockquote>
+<p><strong>数据</strong>是对客观事物的符号表示，在计算机科学中指所有能输入到计算机中并被计算机程序处理的符号的总称。它是计算机加工的“原料”。例如，一个利用数值分析方法解代数方程的程序，其处理对象是整数喝实数；一个编译程序或文字处理程序的处理对象是字符串，因此，对计算机科学而言，数据的含义极为广泛，如图像、声音等都可以通过编码而归之于数据的范畴。</p>
+</blockquote>
+<p><strong>data element</strong></p>
+<blockquote>
+<p><strong>数据元素</strong>是数据的基本单位，在计算机程序中通常作为一个整体进行考虑和处理。例如，例“树”中的一个棋盘格局，例“图”中的一个圆圈都被称为一个数据元素。有时，一个数据元素可由若干个<strong>数据项</strong>组成，例如，例中一本书的书目信息为一个数据元素，而书目信息中的每一项，如（书名、作者名等）为一个数据项。数据项是数据不可分割的最小单位。</p>
+</blockquote>
+<p><strong>data object</strong></p>
+<blockquote>
+<p><strong>数据对象</strong>是性质相同的数据元素的集合，是数据的一个子集。例如，整数数据对象是集合N={0，±1，···}，字母祖父数据对象是集合C={’A‘，‘B’，’C’，···，‘Z’}。</p>
+</blockquote>
+<p><strong>data structure</strong></p>
+<blockquote>
+<p><strong>数据结构</strong>是相互之间存在一种或多种特定关系的数据元素的集合。任何问题中，数据元素都不是孤立存在的，而是它们之间存在着某种关系，这种数据元素相互之间的关系称为<strong>结构</strong>，通常有以下四类基本结构</p>
+<ol>
+<li>集合。结构中的元素除了”同属于一个集合“的关系外，没有其他关系。</li>
+<li>线性结构。结构中的数据元素之间存在一个对一个的关系。</li>
+<li>树形结构。结构中的元素存在一个对多个的关系。</li>
+<li>图状结构或网状结构。结构中的元素存在多个对多个的关系。</li>
+</ol>
+</blockquote>
+</blockquote>
+<h4 id="Data-Structure-D-S"><a href="#Data-Structure-D-S" class="headerlink" title="Data_Structure=(D,S)"></a><strong>Data_Structure=(D,S)</strong></h4><blockquote>
+<blockquote>
+<p><strong>D</strong>是数据的有限集</p>
+<p><strong>S</strong>是D上关系的有限集</p>
+<blockquote>
+<p>例1-4</p>
+<p>在计算机科学中复数可取如下定义：复数是一种数据结构 Complex = (C,R)</p>
+<p>其中 C 是含两个实数的集合{c1,c2}；R = {P}，而 P 是定义在集合C上的一种关系{&lt;c1,c2&gt;}，其中有序偶&lt;c1,c2&gt;表示 c1 是复数的实部，c2 是复数的虚部</p>
+</blockquote>
+<blockquote>
+<p>例1-5</p>
+<p>假设我们需要编制一个事物管理的程序，管理学校科学研究课题小组的各项事务，则首先要为程序的操作对象——课题小组设计一个数据结构。假设每个小组由一位教师、1<del>3名研究生以及1</del>6名从本科生组成，小组成员之间的关系是：教师指导研究生，而每位研究生指导1~2名本科生。则可以如下定义数据结构： Group = (P,R)</p>
+<p>其中：</p>
+<p>P = {T，G1，···，Gn，S11，···，Smn，1&lt;=n&lt;=3,1&lt;=n&lt;=2}</p>
+<p>R = {R1,R2}</p>
+<p>R1 = {&lt;T,Gi&gt;|1&lt;=i&lt;=n,1&lt;=n&lt;=3}</p>
+<p>R2 = {&lt;Gi,Sij&gt;|1&lt;=i&lt;=n,1&lt;=j&lt;=m,1&lt;=n&lt;=3,1&lt;=m&lt;=2}</p>
+</blockquote>
+<p>上述数据结构的定义仅是对操作对象的一种数学描述，换句话说，是从操作对象抽象出来的数学模型。结构定义中的“关系”描述的是数据元素之间的逻辑关系，因此又称为数据的<strong>逻辑结构</strong>。然而，讨论数据结构的目的是为了在计算机中实现对它的操作，因此还需要研究如何在计算机中表示它。</p>
+<p> 计算机中表示信息的最小单位是位(bit)， 由若干个位组合起来形成一个位串表示一个数据元素，通常称为这个位串为元素(element)·或结点(node)。当数据元素由若干数据项组成时，位串中对应于各个数据项的子位串称为<strong>数据域</strong>。因此，元素或结点可以看成是数据元素在计算机中的映像。</p>
+<blockquote>
+<p>顺序映像</p>
+<p>借助元素在存储器中的相对位置来表示数据元素之间的逻辑关系</p>
+<p>顺序存储结构</p>
+</blockquote>
+<blockquote>
+<p>非顺序映像</p>
+<p>借助指示元素存储地址的指针表示数据元素之间的逻辑关系</p>
+<p>链式存储结构</p>
+</blockquote>
+<p>数据的逻辑结构和物理结构是密切相关的两个方面，任何一个算法的设计取决于选定的数据（逻辑）结构，而算法的实现依赖于采用的存储结构</p>
+</blockquote>
+</blockquote>
+<h3 id="虚拟存储结构"><a href="#虚拟存储结构" class="headerlink" title="虚拟存储结构"></a><strong>虚拟存储结构</strong></h3><p>使用高级语言时难以用存储器的物理状态描述，所以用数据类型替换后进行描述，这种方式被称为虚拟存储结构。</p>
+<h4 id="数据类型"><a href="#数据类型" class="headerlink" title="数据类型"></a>数据类型</h4><blockquote>
+<p>数据类型是一个值的集合和定义在这个值集上的一组操作的总称。</p>
+<blockquote>
+<p>例如C语言中的整型变量，其值集是某个区间上的整数，定义在其上的操作为加减乘除和取模等算术运算。</p>
+</blockquote>
+</blockquote>
+<h3 id="抽象数据类型-Abstract-Data-Type"><a href="#抽象数据类型-Abstract-Data-Type" class="headerlink" title="抽象数据类型(Abstract Data Type)"></a>抽象数据类型(Abstract Data Type)</h3><p>抽象数据类型是指一个数学模型以及定义才该模型上的一组操作。</p>
+<p>抽象数据类型的定义仅取决于它的一组逻辑特性，而于其在计算机内部如何表示和实现无关，即不论其内部结构如何变化，只要它的数学特性不变，都不影响其外部的使用。</p>
+<blockquote>
+<p>原子类型</p>
+<blockquote>
+<p>原子类型属原子类型的变量的值是不可分解的。这类抽象数据类型较少，因为一般情况下，已有的固有数据类型足以满足需求。但有时也有必要定义新的原子数据类型，例如数位为100的整数。</p>
+</blockquote>
+<p>固定聚合类型</p>
+<blockquote>
+<p>固定聚合类型属该类型的变量，其值由确定数目的成分按某种结构组成。例如，复数是由两个实数以此确定的次序关系构成。</p>
+</blockquote>
+<p>可变聚合类型</p>
+<blockquote>
+<p>可变聚合类型和固定聚合类型相比较，构成可变聚合类型“值”的成分的数目不确定。例如，可定义一个“有序整数序列”的抽象数据类型，其中序列的长度是可变的。</p>
+</blockquote>
+<p>后两种类型可统称为结构类型。</p>
+</blockquote>
+<h4 id="D-S-P"><a href="#D-S-P" class="headerlink" title="(D,S,P)"></a>(D,S,P)</h4><p>和数据结构的形式定义相对应，抽象数据类型可用以下三元组表示 (D,S,P)</p>
+<p>其中，D是数据对象，S是D上的关系集，P是对D的基本操作集。</p>
+<h3 id="算法和算法分析"><a href="#算法和算法分析" class="headerlink" title="算法和算法分析"></a>算法和算法分析</h3><h4 id="算法的五个重要特性："><a href="#算法的五个重要特性：" class="headerlink" title="算法的五个重要特性："></a>算法的五个重要特性：</h4><blockquote>
+<p>有穷性</p>
+<blockquote>
+<p>一个算法必须总是在执行有穷步后结束，且每一步都可在有穷时间内完成</p>
+</blockquote>
+<p>确定性</p>
+<blockquote>
+<p>算法中的每一条指令必须有确切的含义，读者理解时不会产生二义性。并且在任何条件下，算法只有唯一的一条执行路径，即对应相同的输入只能得出相同的输出</p>
+</blockquote>
+<p>可行性</p>
+<blockquote>
+<p>一个算法是可行的，即算法中的描述的操作都是通过已经实现的基本运算执行有限次来实现的。</p>
+</blockquote>
+<p>输入</p>
+<blockquote>
+<p>一个算法有0个或多个输入。</p>
+</blockquote>
+<p>输出</p>
+<blockquote>
+<p>一个算法有1个或多个输出</p>
+</blockquote>
+</blockquote>
+<h4 id="算法设计的要求："><a href="#算法设计的要求：" class="headerlink" title="算法设计的要求："></a>算法设计的要求：</h4><blockquote>
+<p>正确性</p>
+<blockquote>
+<p>应当满足具体问题的需求。通常一个大型问题的需求，要以特定的规格说明方式给出，而一个实习问题或练习题，往往没有那么严谨，目前多数用自然语言描述，它至少应对包括对输入输出和加工处理等的明确的无歧义性的描述。</p>
+<p>“正确”的层次：</p>
+<ol>
+<li>程序不含语法错误</li>
+<li>程序对机组输入数据能够得出满足规格说明要求的结果</li>
+<li>程序对精选的典型、苛刻而带有刁难性的几组输入数据能够得出满足规格说明要求的结果</li>
+<li>程序对于一切合法输入数据都能产生满足规格说明要求的结果</li>
+</ol>
+<p>通常第三层意义的正确性是衡量一个程序是否合格的标准</p>
+</blockquote>
+<p>可读性</p>
+<blockquote>
+<p>算法主要是为了人的阅读和交流，其次才是机器执行 。可读性好，有助于人对算法的理解；可读性差，晦涩难懂的程序易于隐藏较多错误。</p>
+</blockquote>
+<p>健壮性</p>
+<blockquote>
+<p>当输入数据非法时，算法也能适当地做出反应或进行处理，而不会产生莫名其妙的输出结果。</p>
+</blockquote>
+<p>效率与低存储量需求</p>
+<blockquote>
+<p>效率是指算法的执行时间</p>
+<p>存储量需求指算法执行过程中所需要的最大空间</p>
+</blockquote>
+</blockquote>
+<h4 id="算法效率的度量："><a href="#算法效率的度量：" class="headerlink" title="算法效率的度量："></a>算法效率的度量：</h4><blockquote>
+<p>事后统计的方法</p>
+<blockquote>
+<p>利用计算机本身的计时功能</p>
+</blockquote>
+<p>事前分析估算的方法</p>
+<blockquote>
+<p>T(n)=O(f(n))</p>
+</blockquote>
+<p><strong>现在最常用的方式是结合事后统计与事前分析来估算时间</strong></p>
+<blockquote>
+<p>例：</p>
+<p>计算机运算10×10矩阵的时间是12ms，时间复杂度T(n)=O(n^3^)，那么可以求得31×31矩阵相乘所需要的时间大致为12ms*(31/10)^3^约等于358ms</p>
+</blockquote>
+</blockquote>
+<h4 id="算法的储存空间需求"><a href="#算法的储存空间需求" class="headerlink" title="算法的储存空间需求"></a>算法的储存空间需求</h4><blockquote>
+<p><strong>空间复杂度</strong>被用来度量所发所需存储空间的度量</p>
+<p><strong>S(n) = O(f(n))</strong></p>
+</blockquote>
+<p>比较不同算法效率和存储空间需求时，往往选取极端情况，即变量为n时的结果。</p>
+<h3 id="本章个人问题"><a href="#本章个人问题" class="headerlink" title="本章个人问题"></a>本章个人问题</h3><ol>
+<li><p>什么是抽象数据类型？</p>
+<p>数据类型的数学抽象特征</p>
+<blockquote>
+<p>例</p>
+<p>“整数”在不同处理器上实现的方法可以不同，但是由于其定义的数学特性相同，在用户看起来都是一样的。</p>
+<p>“抽象”的意义在于数据类型的抽象特征</p>
+</blockquote>
+<p>我对“整数”这个例子的理解</p>
+<ol>
+<li><p>“整数”类型，在数学上的定义是：</p>
+<blockquote>
+<p>整数（integer）是正整数、零、负整数的集合。</p>
+<p>整数的全体构成<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B4%E6%95%B0%E9%9B%86/6858292">整数集</a>，整数集是一个<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%95%B0%E7%8E%AF/9403928">数环</a>。在整数系中，<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E9%9B%B6/36714">零</a>和正整数统称为自然数。-1、-2、-3、…、-<em>n</em>、…（<em>n</em>为非零自然数）为<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E8%B4%9F%E6%95%B4%E6%95%B0/7424129">负整数</a>。则<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E6%AD%A3%E6%95%B4%E6%95%B0/8461335">正整数</a>、零与负整数构成整数系。整数不包括小数、<a target="_blank" rel="noopener" href="https://baike.baidu.com/item/%E5%88%86%E6%95%B0/2067623">分数</a>。——来自百度百科</p>
+</blockquote>
+<p>由此定义，“整数”有了操作对象</p>
+</li>
+<li><p>整数是符号和尾数组成，也就是&lt;±，Z&gt;</p>
+</li>
+<li><p>整数的操作是加减乘，取整，取余</p>
+</li>
+</ol>
+<p>然后抽象为抽象数据类型：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ADT int&#123;</span><br><span class="line">	数据对象:Z</span><br><span class="line">	数据关系:R = &#123;&lt;±,Z&gt;&#125;</span><br><span class="line">	基本操作:加减乘，取整，取余</span><br><span class="line">&#125;ADT int</span><br></pre></td></tr></table></figure></li>
+<li><p>什么叫“定义一个有序整数序列”的抽象数据类型？</p>
+</li>
+<li><p>为什么上面的类型类型“值”的成分数目不确定？</p>
+</li>
+<li><p>什么是Status类型</p>
+<p><strong>返回值为状态代码的函数类型,C中本不存在,由typedef定义</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="keyword">int</span> Status;</span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> TRUE 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> FALSE 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OK 1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> ERROR 0</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INFEASIBLE -1</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> OVERFLOW -2</span></span><br><span class="line"><span class="comment">//上面是Status定义中的函数结果状体码</span></span><br><span class="line"><span class="function">Status <span class="title">creat</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a =<span class="number">3</span>;</span><br><span class="line">    <span class="keyword">return</span> ok;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></li>
+</ol>
+<h2 id="第一章-线性表"><a href="#第一章-线性表" class="headerlink" title="第一章 线性表"></a>第一章 线性表</h2><h3 id="线性表的类型定义"><a href="#线性表的类型定义" class="headerlink" title="线性表的类型定义"></a>线性表的类型定义</h3><blockquote>
+<ol>
+<li><strong>线性表</strong>时最常用且最简单的一种数据结构</li>
+<li>一个线性表时n个数据元素的有限序列</li>
+<li>在稍复杂的线性表中,一个数据元素可由若干个<strong>数据项</strong>组成.在这种情况下,常把数据元素称为<strong>记录</strong>,含有大量记录的线性表又称为文件</li>
+</ol>
+</blockquote>
+<h4 id="线性表的抽象定义"><a href="#线性表的抽象定义" class="headerlink" title="线性表的抽象定义"></a>线性表的抽象定义</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br></pre></td><td class="code"><pre><span class="line">ADT List&#123;</span><br><span class="line">	数据对象:D = &#123;ai|ai属于ElemSet,i=1,2,···,n,n&gt;=0&#125;</span><br><span class="line">	数据关系:R1 = &#123;&lt;a(i-1),ai&gt;|a(i-1),ai属于D，i=2,···,n&#125;</span><br><span class="line">	基本操作:</span><br><span class="line">	InitList(&amp;L)</span><br><span class="line">		操作结构：构造一个空的线性表L。</span><br><span class="line">    DestroyList(&amp;L)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：销毁L</span><br><span class="line">    ClearList(&amp;L)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：将L重置为NULL</span><br><span class="line">    ListEmpty(L)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：若L为空表，返回true，否则返回flase</span><br><span class="line">    ListLength(L)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：返回L中元素的个数（不论元素内容是否为空）</span><br><span class="line">    GetElem(L,i,&amp;e)</span><br><span class="line">    	初始条件：L存在&amp;&amp;1&lt;=i&lt;=ListLength(L)</span><br><span class="line">    	操作结果：用e返回L中第i个数</span><br><span class="line">    LocateElem(L,e,compare)</span><br><span class="line">    	初始条件：L存在，compare()时数据元素判定函数</span><br><span class="line">    	操作结果：返回L中第一个与e满足关系compare()的数据元素位序。若这样的数据元素不存在则返回值0</span><br><span class="line">    PriorElem(L,cur_e,&amp;pre_e)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：若cur_e是L的数据元素，且不是第一个，则用pre_e返回它的前驱，否则操作失败。</span><br><span class="line">    NextElem(L,cur_e,&amp;next_e)</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：若cur_e是L的数据元素，且不是第一个，则用next_e返回它的后驱，否则操作失败。</span><br><span class="line">    ListInsert(&amp;L,i,e)</span><br><span class="line">    	初始条件：L存在&amp;&amp;1&lt;=i&lt;=(ListLength(L)+1)</span><br><span class="line">    	操作结果：在L中第i个位置插入新的数据元素e，L的长度+1。</span><br><span class="line">    ListDelete(&amp;L,i,&amp;e)</span><br><span class="line">    	初始条件：L存在&amp;&amp;1&lt;=i&lt;=ListLength(L)</span><br><span class="line">    	操作结果：删除L的第i个数据元素并用e返回其值，L的长度为-1</span><br><span class="line">    ListTraverse(L,visit())</span><br><span class="line">    	初始条件：L存在</span><br><span class="line">    	操作结果：以此对L的每个数据元素调用函数visit()。一旦visit()失败，则操作失败</span><br><span class="line">&#125;ADT List</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="合并算法"><a href="#合并算法" class="headerlink" title="合并算法"></a>合并算法</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">union</span><span class="params">(List &amp;La,List Lb)</span></span>&#123;</span><br><span class="line">    <span class="comment">//将所有的线性表Lb中但不在La中的元素插入到La中</span></span><br><span class="line">    La_len = ListLength(La);Lb_len = ListLength(Lb);</span><br><span class="line">    <span class="keyword">for</span>(i = <span class="number">1</span>;i&lt;=Lb_len;i++)&#123;</span><br><span class="line">        GetElem(Lb,i,e);</span><br><span class="line">        <span class="keyword">if</span>(!LocateElem(La,e,equal))<span class="comment">//判断是否不相等,不相等时添加到La的最后面</span></span><br><span class="line">            ListInsert(La,++La_len,e);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>假如GetElem和ListInsert这两个操作的执行时间与表长无关,LocateElem的执行时间和表长成正比。</p>
+<p>则这个算法的时间复杂度 = <code>O(ListLength(Lb)×ListLength(La))。</code></p>
+<p>理由是：</p>
+<p>​    这个算法需要用循环遍历b，且每一个b都经历了一个LocateElem,而它的时间在这里与ListLength(La)成正比，所以时间复杂度 =  <code>O(ListLength(Lb)×ListLength(La))</code></p>
+<h4 id="归并算法"><a href="#归并算法" class="headerlink" title="归并算法"></a>归并算法</h4><p>现有表La与表Lb，想要La与Lb按值递减合并在Lc中 </p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">MergeList</span><span class="params">(List La,List Lb,List &amp;Lc)</span></span>&#123;</span><br><span class="line">    <span class="function">Init <span class="title">List</span><span class="params">(LC)</span></span>;</span><br><span class="line">    i=j=<span class="number">1</span>;k=<span class="number">0</span>;</span><br><span class="line">    La_LEN = ListLength(La);Lb_len = ListLength(Lb);</span><br><span class="line">    <span class="keyword">while</span>((i&lt;=Lb_len)&amp;&amp;(Lb_len))&#123;</span><br><span class="line">        GetElem(La,i,ai);GetElem(Lb,j,bj);</span><br><span class="line">        <span class="keyword">if</span>(ai&lt;=bj)&#123;ListInsert(Lc,++k,ai);++i;&#125;</span><br><span class="line">        <span class="keyword">else</span>&#123;ListInsert(Lc,++k,bj);++j;&#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=La_len)&#123;</span><br><span class="line">        GetElem(La,i++,ai);ListInsert(Lc,++k,ai);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">while</span>(j&lt;=Lb_LEN)&#123;</span><br><span class="line">        GetElem(Lb,j++,bj);ListInsert(Lc,++K,bj);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//MergList</span></span><br></pre></td></tr></table></figure>
+
+<p>假如GetElem和ListInsert这两个操作的执行时间与表长无关,LocateElem的执行时间和表长成正比。</p>
+<p>则这个算法的时间复杂度等于<code>O(ListLength(Lb)+ListLength(La))。</code></p>
+<p>理由是：</p>
+<p>​    在这个算法中，第一个while的实际耗时是2×(ListLength(La)||ListLength(Lb))，至于是A表长度还是B表长度要看哪个更短，第二和第三while在这个函数块的一次运行中只能发生一个，所以耗时是  (较长表长度-短表长度)  所以时间复杂度 = <code>O(ListLength(Lb)+ListLength(La))</code></p>
+<h3 id="线性表的顺序表示和实现"><a href="#线性表的顺序表示和实现" class="headerlink" title="线性表的顺序表示和实现"></a>线性表的顺序表示和实现</h3><p>线性表的顺序表示：</p>
+<p>​    用一组地址连续的存储单元依次存储线性的数据元素。LOC(a<del>1</del>)是线性表的第一个数据元素a<del>1</del>的存储位置,通常称作线性表的起始位置或者基地址。</p>
+<p>​    这种表示方式在逻辑上也称作<strong>物理位置相邻</strong>。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> SIZE 100</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> INCREMENT 10</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType *elem;</span><br><span class="line">    <span class="keyword">int</span> length;</span><br><span class="line">    <span class="keyword">int</span> listsize;</span><br><span class="line">&#125;SqList;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitList_Sq</span><span class="params">(SqList &amp;L)</span></span>&#123;</span><br><span class="line">    <span class="comment">//构造一个空的线性表</span></span><br><span class="line">    L.elem = (ElemType *)<span class="built_in">malloc</span>(SIZE*<span class="keyword">sizeof</span>(ElemType));</span><br><span class="line">    <span class="keyword">if</span>(!L.elem)<span class="built_in">exit</span>(OVERFLOW);<span class="comment">//存储分配失败</span></span><br><span class="line">    L.length = <span class="number">0</span>;<span class="comment">//空表长度为0</span></span><br><span class="line">    L. listsize = SIZE;<span class="comment">//初始存储容量</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//InitList_Sq</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="线性表顺序存储结构的插入算法"><a href="#线性表顺序存储结构的插入算法" class="headerlink" title="线性表顺序存储结构的插入算法"></a>线性表顺序存储结构的插入算法</h4><blockquote>
+<p>当插入数据时,长度n变为了n+1, a<del>i-1</del> 与 a<del>i</del> 的逻辑关系发生了变化。我们已知线性表顺序存储结构中，逻辑上相邻的元素间，位置关系也是相邻的，因此除非<strong>i=n+1</strong>，否则插入时需要移动元素才能反应逻辑关系的变化</p>
+</blockquote>
+<blockquote>
+<p>一般情况下 (1&lt;=i&lt;=n) ，在第i个元素之前插入一个元素时，需要将第n至第i个元素向后移动移动一个位置</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">LisInsert_Sq</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i,ElemType e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//在顺序线性表中第i个位置之前插入新元素</span></span><br><span class="line">    <span class="comment">//i的合法值为(1&lt;=i&lt;=ListLength_Sq(L)+1)</span></span><br><span class="line">    <span class="keyword">if</span>(i&lt;<span class="number">1</span>||i&gt;ListLength_Sq(L)+<span class="number">1</span>)<span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(L.length&gt;=L.listsize)&#123;</span><br><span class="line">        newbase = (ElemType*)<span class="built_in">realloc</span>(L.elem,(L.listsize + INCREMENT) * <span class="keyword">sizeof</span>(ElemType));<span class="comment">//容量增加一个INCREMENT</span></span><br><span class="line">        <span class="keyword">if</span>(!newbase)<span class="built_in">exit</span>(OVERFLOW);<span class="comment">//地址分配失败</span></span><br><span class="line">        L.elem = newbase;<span class="comment">//新基址</span></span><br><span class="line">        L.listsize += INCREMENT;<span class="comment">//容量值记录增加</span></span><br><span class="line">    &#125;</span><br><span class="line">    q = &amp;(L.elem[i<span class="number">-1</span>]);</span><br><span class="line">  </span><br><span class="line">    <span class="keyword">for</span>(p = &amp;(L.elem[L.length<span class="number">-1</span>]),p &gt;= q; --p)</span><br><span class="line">        *(p+<span class="number">1</span>) = *p;<span class="comment">//元素右移</span></span><br><span class="line"></span><br><span class="line">    *q = e;<span class="comment">//插入新内容</span></span><br><span class="line">    ++L.length;<span class="comment">//表长+1</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//ListInsert_Sq</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="线性表顺序存储结构的删除算法"><a href="#线性表顺序存储结构的删除算法" class="headerlink" title="线性表顺序存储结构的删除算法"></a>线性表顺序存储结构的删除算法</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">LisDelete_Sq</span><span class="params">(SqList &amp;L,<span class="keyword">int</span> i,ElemType &amp;e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//在顺序先线性表中删除第i个元素,并用e返回它的值</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>((i&lt;<span class="number">1</span>)||(i&gt;L.length))<span class="keyword">return</span> ERROR;</span><br><span class="line">    P = &amp;(L.elem[i<span class="number">-1</span>]);</span><br><span class="line">    e = *p;</span><br><span class="line">    q = L.elem+L.length<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">for</span>(++p;p&lt;=q;++p)</span><br><span class="line">        *(p<span class="number">-1</span>) = *p;</span><br><span class="line">    --L.length;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//ListDelet_Sq</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>顺序线性表的删除算法只能使内容清除并维持正确的物理逻辑,表本身占用的空间并不会改变</strong></p>
+<p>每进行一次删除或者插入,平均有大约一半的表内元素发生了移动,所以当表长为n时,这两种算法的时间复杂度都是O(n)。</p>
+<h4 id="根据compare规则查找表内一个值"><a href="#根据compare规则查找表内一个值" class="headerlink" title="根据compare规则查找表内一个值"></a>根据compare规则查找表内一个值</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">LocateElem_Sq</span><span class="params">(SqList L,ElemType e,Status(*compare)(ElemType))</span></span>&#123;</span><br><span class="line">    <span class="comment">//在线性表L中查找一个值与e满足compare()的元素位序</span></span><br><span class="line">    <span class="comment">//若找到,贼返回其值在L中的位序,否则返回0</span></span><br><span class="line">    i = <span class="number">1</span>;</span><br><span class="line">    p = L.elem;</span><br><span class="line">    <span class="keyword">while</span>(i&lt;=L.length&amp;&amp;!(*compare)(*P++,e))</span><br><span class="line">        ++i;</span><br><span class="line">    <span class="keyword">if</span>(i&lt;=L.length)<span class="keyword">return</span> i;</span><br><span class="line">    <span class="keyword">else</span> <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;<span class="comment">//LocateElem_Sq</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="线性表的链式表示和实现"><a href="#线性表的链式表示和实现" class="headerlink" title="线性表的链式表示和实现"></a>线性表的链式表示和实现</h3><p>区别于顺序线性表</p>
+<pre><code>1. 不需要物理位置相邻
+2. 失去了顺序表随机存取的优点
+</code></pre>
+<p>链式线性表由<strong>结点</strong>组成,每一个结点包含两个域</p>
+<blockquote>
+<ol>
+<li><p>数据域</p>
+<p>存储数据元素信息的域</p>
+</li>
+<li><p>指针域</p>
+<p>存储直接后继的域</p>
+</li>
+</ol>
+</blockquote>
+<p>只有一个指针域指向其后继的链表是<strong>单链表</strong>,它是一种非随机存取的存储结构</p>
+<p>定义如下:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>&#123;</span></span><br><span class="line">    ElemType elem;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;data;</span><br></pre></td></tr></table></figure>
+
+<p>链式结构:</p>
+<p>​    <strong>头结点-&gt;结点1-&gt;结点2-&gt;结点3-&gt;NULL</strong></p>
+<p>头结点可以不存储数据,也可以用来存储附加信息。</p>
+<p>在我个人的学校和使用中我一般不去用它存储数据。</p>
+<h4 id="在动态链式线性表中实现增删改查"><a href="#在动态链式线性表中实现增删改查" class="headerlink" title="在动态链式线性表中实现增删改查"></a>在动态链式线性表中实现增删改查</h4><h5 id="增"><a href="#增" class="headerlink" title="增"></a>增</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">LisInsert</span><span class="params">(data *L,<span class="keyword">int</span> i,ElemType e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//当L存在时</span></span><br><span class="line">    <span class="comment">//在第i个位置插入数据e</span></span><br><span class="line">    data* newdata = (data*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(data));<span class="comment">//开辟空间</span></span><br><span class="line">    data*p=L-&gt;next;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)<span class="keyword">return</span> ERROR;<span class="comment">//p指向为空</span></span><br><span class="line">    newdata-&gt;elem = e;<span class="comment">//向新空间中预存e</span></span><br><span class="line">    <span class="keyword">for</span>(p&amp;&amp;j&lt;i<span class="number">-1</span>)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!p||j&gt;i<span class="number">-1</span>)<span class="keyword">return</span> ERROR;<span class="comment">//第i个结点不存在</span></span><br><span class="line">    newdata-&gt;next = p-&gt;next;<span class="comment">//新空间指向原i号结点</span></span><br><span class="line">    p-&gt;next = newdata;<span class="comment">//第i-1号结点指向新空间,新空间成为第i号结点</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="删"><a href="#删" class="headerlink" title="删"></a>删</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListDelete</span><span class="params">(data* L,<span class="keyword">int</span> i,ElemType* e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//当L存在时</span></span><br><span class="line">    <span class="comment">//删除第i个位置的数据并用e返回数据到调用函数</span></span><br><span class="line">    data* q=<span class="literal">NULL</span>;</span><br><span class="line">    data* p=L-&gt;next;</span><br><span class="line">    ElemType keep_data;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">1</span>;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)<span class="keyword">return</span> ERROR;<span class="comment">//p指向为空</span></span><br><span class="line">    <span class="keyword">for</span>(p&amp;&amp;j&lt;i<span class="number">-1</span>)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!p||j&gt;i<span class="number">-1</span>)<span class="keyword">return</span> ERROR;<span class="comment">//第i个结点不存在</span></span><br><span class="line">    q = p-&gt;next;<span class="comment">//q记录这个结点</span></span><br><span class="line">    keep_data = &amp;q-&gt;elem;<span class="comment">//用e返回被删除的内容</span></span><br><span class="line">    e = &amp;keep_data;</span><br><span class="line">    p = p-&gt;next-&gt;next;<span class="comment">//连接i号前后结点</span></span><br><span class="line">    <span class="built_in">free</span>(q);<span class="comment">//释放被删除的结点占用的存储空间</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h5 id="改"><a href="#改" class="headerlink" title="改"></a>改</h5><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListAlter</span><span class="params">(data* L,<span class="keyword">int</span> i,ElemType e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//当L存在</span></span><br><span class="line">    <span class="comment">//将第i号结点的数据修改为e</span></span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">1</span>;</span><br><span class="line">    data*p=L-&gt;next;</span><br><span class="line">    <span class="keyword">if</span>(p==<span class="literal">NULL</span>)<span class="keyword">return</span> ERROR;<span class="comment">//p指向为空</span></span><br><span class="line">    <span class="keyword">for</span>(p&amp;&amp;j&lt;i<span class="number">-1</span>)&#123;</span><br><span class="line">        p = p-&gt;next;</span><br><span class="line">        ++j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(!p||j&gt;i<span class="number">-1</span>)<span class="keyword">return</span> ERROR;<span class="comment">//第i个结点不存在</span></span><br><span class="line">    p-&gt;next-&gt;elem = e;<span class="comment">//修改数据</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>注:以上三种算法时间复杂度都为O(n)</p>
+<p>当使用指针时也可以使用链表,可以采用数组的形式来定义静态链表,在结构的定义中可以用cur做类指针的作用</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType elem;</span><br><span class="line">    <span class="keyword">int</span> cur;<span class="comment">//位序</span></span><br><span class="line">&#125;data;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>类似的可以写出在静态链表中实现插入和删除操作的算法。在静态链表中需要用户自己实现malloc和free。</p>
+<p>为了辨明数组中哪些分量未被使用，解决的办法时将所有未被使用过的已经被删除的分量用游标链成一个备用的链接，每当进行插入时便可从备用链表上取得第一个结点作为待插入的新结点；反之，删除时将从链表中删除下来的结点链接到备用链表上。</p>
+</blockquote>
+<h4 id="循环链表"><a href="#循环链表" class="headerlink" title="循环链表"></a>循环链表</h4><p>最后一个结点的指针域指向头结点。</p>
+<blockquote>
+<p>有时候在循环链表中设立尾指针而不设头指针可以使某些操作简化。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">MergeList</span><span class="params">(data* c1,data* c2)</span></span>&#123;</span><br><span class="line">    data*cc=c1-&gt;next;<span class="comment">//记录c1头地址</span></span><br><span class="line">    c1-&gt;next = c2-&gt;next;<span class="comment">//c1的尾部指向c2头部</span></span><br><span class="line">    c2-&gt;next = cc;<span class="comment">//c2尾部指向c1头部</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>时间复杂度O(1)</p>
+<h4 id="双向链表"><a href="#双向链表" class="headerlink" title="双向链表"></a>双向链表</h4><p>每一个结点都存储了其直接前驱和直接后继。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>&#123;</span></span><br><span class="line">    ElemType elem;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>* <span class="title">prev</span>;</span></span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;data;</span><br></pre></td></tr></table></figure>
+
+<p>每个结点拥有两个指针使得其操作起来更加复杂,但是在信息的存取上却更有优势。</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="function">Status <span class="title">ListInsert_DuL</span><span class="params">(data &amp;L,<span class="keyword">int</span> i ,ElemType e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//在带头节点双链循环线性表L中第i个位置之前插入元素e</span></span><br><span class="line">    <span class="comment">//i的合法值为1&lt;=i&lt;=length+1</span></span><br><span class="line">    <span class="keyword">if</span>(!(p = GetElem_DuL(L,i)))</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">if</span>(!(s = (data*)<span class="built_in">malloc</span>(data)))</span><br><span class="line">        <span class="keyword">return</span> ERROR;</span><br><span class="line">    s-&gt;elem = e;</span><br><span class="line">    s-&gt;prior = p-&gt;prior; p-&gt;prior_&gt;next = s;</span><br><span class="line">    s-&gt;next = p;	p-&gt;prior = s;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//ListInsert_DuL</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="一元多项式的表示与相加"><a href="#一元多项式的表示与相加" class="headerlink" title="一元多项式的表示与相加"></a>一元多项式的表示与相加</h3><p>在数学上，一元多项式按升幂写成：<br>$$<br>P_n(x) = {p_0 + p_1x + p_2x^2 + … + p_nx^n}<br>$$<br>它由n+1个系数唯一确定。</p>
+<p>在计算机中可以用P表示：<br>$$<br>P = {(p_0,p_1,p_2,…,p_n)}<br>$$<br>每一项的指数i隐含在 <strong>p<del>i</del></strong> 的序号里。</p>
+<p>假设有一个Q<del>m</del>(x)是一元m次多项式，用线性表Q表示：<br>$$<br>Q = {(q_0,q_1,q_2,…,q_m)}<br>$$<br>不失一般性，设m&lt;n，则两式相加的结果:<br>$$<br>R_n(x)={P_n(X)+Q_m(x)}<br>$$<br>线性表示为：<br>$$<br>R = {(p_0+q_0,p_1+q_1,p_2+q_2,…,p_m+q_m,p_{m+1}…,p_n)}<br>$$</p>
+<blockquote>
+<p>显然，我们可以对P、Q和R采用顺序存储结构，使得多项式相加的算法定义十分简洁。 </p>
+<p>然而，在通常的应用中，多项式的次数可能很高而且变化很大，使得顺序存储结构的最大长度很难确定。</p>
+</blockquote>
+<p>$$<br>S(x)=1 + 3x^{10000} + 2x^{20000}<br>$$</p>
+<p>例如上面这个式子</p>
+<blockquote>
+<p>如果按照之前的方式处理它,就要用长度为20001的线性表来表示,表中仅有3个非零元素,这种对内存空间的浪费是应当避免的,但是如值存储非零系数项显然必须同时存储相应的指数</p>
+</blockquote>
+<p>我们通过式子可以看出,一个一元多次项是由输入 <strong>x</strong> 和固定系数 <strong>p<del>m</del></strong> 与指数 <strong>e<del>m</del></strong> 决定的，其中：<br>$$<br>0≤e_1&lt;e_2&lt;…&lt;e_m = n<br>$$<br>用一个长度为m且每个元素有两个数据项(系数与指数)的线性表:<br>$$<br>((p_1,e_1),(p_2,e_2),…,(p_m,e_m))<br>$$<br>可以确定唯一确定多项式P<del>n</del>(x)。在最坏情况下n+1个系数均不为零，则m=n+1。</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">ADT Polynomial&#123;</span><br><span class="line">	数据对象：</span><br><span class="line">	数据关系：</span><br><span class="line">	基本操作：</span><br><span class="line">		</span><br><span class="line">	</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+<h2 id="第二章-栈和队列"><a href="#第二章-栈和队列" class="headerlink" title="第二章 栈和队列"></a>第二章 栈和队列</h2><h3 id="栈-stack"><a href="#栈-stack" class="headerlink" title="栈(stack)"></a>栈(stack)</h3><p>定义:</p>
+<p>​    栈是限定仅在表尾进行插入或删除操作的线性表。表尾称为栈顶，表头称为栈底。</p>
+<h4 id="栈的抽象数据类型定义"><a href="#栈的抽象数据类型定义" class="headerlink" title="栈的抽象数据类型定义:"></a>栈的抽象数据类型定义:</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ADT Stack&#123;</span><br><span class="line">    数据对象: D = &#123;ai∈ElemSet,i = 1,2,...,n, n≥0&#125;</span><br><span class="line">    数据关系: R1 = &#123;&lt;a(i-1)&#125;</span><br><span class="line">    基本操作:</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>栈的顺序结构是利用一组地址连续的存储单元一次存放自栈底到栈顶的数据元素,勇士附设指针top指示栈顶元素再顺序栈中的位置。</p>
+<p>通常的习惯做法是以top = 0 表示空栈，鉴于C语言中数组的下标约定从0开始，则当以C作描述语言时，如此设定会带来很大不便；另一方面，由于栈在使用过程中所需的最大空间的大小很难估计，因此，一般来说，在初始化空栈时不应限定栈的最大容量。</p>
+<p>一个较为合理的做法：</p>
+<p>​    先为栈分配一个基本容量，然后在应用过程中，当栈的空间不够使用时再逐段扩大。</p>
+</blockquote>
+<h4 id="顺序栈的定义"><a href="#顺序栈的定义" class="headerlink" title="顺序栈的定义"></a>顺序栈的定义</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_SIZE<span class="comment">//存储空间初始分配量</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACKINCREMENT<span class="comment">//存储空间分配增量</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    SElemType *base;<span class="comment">//base指向栈底(第一个创建的存储空间)</span></span><br><span class="line">    SElemType *top;<span class="comment">//top指向栈顶(最后一个存储空间)</span></span><br><span class="line">    <span class="keyword">int</span> stactsize;<span class="comment">//这个栈标记的空间的大小</span></span><br><span class="line">&#125;SqStack;</span><br></pre></td></tr></table></figure>
+
+<h4 id="顺序栈的模块说明"><a href="#顺序栈的模块说明" class="headerlink" title="顺序栈的模块说明:"></a>顺序栈的模块说明:</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//==== ADT Stack 的表示与实现 ====</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">//----栈的顺序存储表示----</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACK_SIZE<span class="comment">//存储空间初始分配量</span></span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> STACKINCREMENT<span class="comment">//存储空间分配增量</span></span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    SElemType *base;<span class="comment">//base指向栈底(第一个创建的存储空间),构造前和销毁后值为NULL</span></span><br><span class="line">    SElemType *top;<span class="comment">//top指向栈顶(最后一个存储空间)</span></span><br><span class="line">    <span class="keyword">int</span> stactsize;<span class="comment">//这个栈标记的空间的大小</span></span><br><span class="line">&#125;SqStack; </span><br><span class="line"><span class="comment">// ----- 基本操作的函数原型说明 -----</span></span><br><span class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(SqStack* s)</span></span>;</span><br><span class="line">	<span class="comment">//构造一个空栈S</span></span><br><span class="line"><span class="function">Status <span class="title">DestroyStack</span><span class="params">(SqStack* S)</span></span>;</span><br><span class="line">	<span class="comment">//销毁一个空栈S</span></span><br><span class="line"><span class="function">Status <span class="title">ClearStatck</span><span class="params">(SqStack* s)</span></span>;</span><br><span class="line">	<span class="comment">//把S置为空栈</span></span><br><span class="line"><span class="function">Status <span class="title">StackEmpty</span><span class="params">(SqStack S)</span></span>;</span><br><span class="line">	<span class="comment">//若栈S为空栈,返回TRUE,否则返回FALSE</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">StackLength</span><span class="params">(SqStack S)</span></span>;</span><br><span class="line"> 	<span class="comment">//返回S的元素个数,即栈的长度</span></span><br><span class="line"><span class="function">Status <span class="title">GetTop</span><span class="params">(SqStack S,SelemType* e)</span></span>;</span><br><span class="line">    <span class="comment">//若栈不空,则用e返回S的栈顶元素,并返回OK;否则返回ERROR</span></span><br><span class="line"><span class="function">Status <span class="title">Push</span><span class="params">(SqStack* S,SElemType* e)</span></span>;</span><br><span class="line">	<span class="comment">//插入元素e为新的栈顶元素</span></span><br><span class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(SqStack* s,SElemType* e)</span></span>;</span><br><span class="line">	<span class="comment">//若栈不空,则删除S的栈顶元素,用e 返回其值,并返回OK;否则返回ERROR;</span></span><br><span class="line"><span class="function">Status <span class="title">StackTraverse</span><span class="params">(SqStack S,Status(*visit)())</span></span>;</span><br><span class="line">	<span class="comment">//从栈底到栈顶依次对栈中的每个元素调用visit(),一旦visit()失败,则操作失败</span></span><br><span class="line"></span><br><span class="line">	<span class="comment">// ----- 基本操作的算法描述 -----</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">InitStack</span><span class="params">(SqStack* s)</span></span>&#123;</span><br><span class="line">    <span class="comment">//构造一个空栈</span></span><br><span class="line">    S.base = (SElemType*)<span class="built_in">malloc</span>(STACK_INIT_SIZE * <span class="keyword">sizeof</span>(SElemType));</span><br><span class="line">    <span class="keyword">if</span>(S.base)<span class="built_in">exit</span>(OVERFLOW);<span class="comment">//存储分配失败</span></span><br><span class="line">    S.top = S.base;</span><br><span class="line">    S.stacksize = STACK_INIT_SIZE;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//InitStack</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">GetTop</span><span class="params">(SqStack S,SelemType* e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//若栈不空,则用e返回S的栈顶元素,并返回OK;否则返回ERROR</span></span><br><span class="line">    <span class="keyword">if</span>(S.top == S.base)<span class="keyword">return</span> ERROR;</span><br><span class="line">    e = *(S.top - <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//GetTop</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">Push</span><span class="params">(SqStack* S,SElemType* e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//插入元素e为新的栈顶元素</span></span><br><span class="line">    <span class="keyword">if</span>(S.top - S.base &gt;= S.stacksize)&#123;<span class="comment">//栈满,追加存储空间</span></span><br><span class="line">        S.base = (SElemType*)<span class="built_in">realloc</span>\</span><br><span class="line">            (S.base,(S.stacksize + STACKINCREMENT) * <span class="keyword">sizeof</span>(SElemType) ));</span><br><span class="line">        <span class="keyword">if</span>(!S.base)<span class="built_in">exit</span>(OVERFLOW);</span><br><span class="line">        S.top = S.base + S.stacksize;</span><br><span class="line">        S.stacksize += STACKINCREMENT;</span><br><span class="line">    &#125;</span><br><span class="line">    *S.top++ =e;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//Push</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">Pop</span><span class="params">(SqStack* S,SElemType* e)</span></span>&#123;</span><br><span class="line">    <span class="comment">//若栈不空,则删除S的栈顶元素,用e 返回其值,并返回OK;否则返回ERROR;</span></span><br><span class="line">    <span class="keyword">if</span>(S.top == S.base)<span class="keyword">return</span> ERROR;</span><br><span class="line">    e = *--S.top;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//Pop</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="栈的应用举例"><a href="#栈的应用举例" class="headerlink" title="栈的应用举例"></a>栈的应用举例</h3><h4 id="数制转换"><a href="#数制转换" class="headerlink" title="数制转换"></a>数制转换</h4><h4 id="括号匹配检验"><a href="#括号匹配检验" class="headerlink" title="括号匹配检验"></a>括号匹配检验</h4><p>原理如下图</p>
+<table>
+<thead>
+<tr>
+<th>栈</th>
+<th>base</th>
+<th>-&gt;</th>
+<th>-&gt;</th>
+<th>-&gt;</th>
+<th>-&gt;</th>
+<th>-&gt;</th>
+<th>-&gt;</th>
+<th>-&gt;top</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>急迫程度</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>数据编号</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>数据内容</td>
+<td>[</td>
+<td>(</td>
+<td>[</td>
+<td>(</td>
+<td>)</td>
+<td>]</td>
+<td>)</td>
+<td>]</td>
+</tr>
+</tbody></table>
+<p>匹配规则：</p>
+<ol>
+<li>类似于([] ())、[([] [])]为正确格式；</li>
+<li>类似于[ ( ] 或 ( ( ) ] )为不正确格式；</li>
+</ol>
+<p>实现所用概念：<strong>期待的急迫程度</strong></p>
+<ol>
+<li>期待的急迫程度高的先匹配；</li>
+<li>急迫程度最高的未被匹配完成前，其他急迫程度不进行匹配。</li>
+</ol>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//匹配[]与()并跳过其他字符</span></span><br><span class="line"><span class="function">Status <span class="title">check</span><span class="params">(ElemType* sup, ElemType* p, <span class="keyword">int</span>* number)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//依次传入“辅助指针”、“top指针”、“当前最高急迫程度值”</span></span><br><span class="line">	<span class="comment">//比较top与sup所指的内容是否匹配,若匹配,降低number值,并返回OK;</span></span><br><span class="line">	<span class="comment">//若不匹配,判断是否合规则,若合规则,number增大,返回OK;若不合规则,返回ERROR</span></span><br><span class="line">	<span class="keyword">switch</span> (*sup) &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">		<span class="keyword">switch</span> (*p) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>:</span><br><span class="line">			number--;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;]&#x27;</span>:</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">&quot;输入不合法&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			number++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">&#x27;[&#x27;</span>:</span><br><span class="line">		<span class="keyword">switch</span> (*p) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;]&#x27;</span>:</span><br><span class="line">			number--;</span><br><span class="line">			<span class="keyword">break</span>;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>:</span><br><span class="line">			<span class="built_in">puts</span>(<span class="string">&quot;输入不合法&quot;</span>);</span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			number++;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<p>自然语言描述:</p>
+<p>​    创建一个空栈,Push进第一个数据,它期待的急迫程度为1。</p>
+<p>​    Push进第二个数据，它没有满足数据1的期待，它的急迫程度为2。</p>
+<p>​    Push进第三个数据，它没有满足数据2的期待，它的急迫程度为3。</p>
+<p>​    Push进第四个数据，它没有满足数据3的期待，它的急迫程度为4。</p>
+<p>​    Push进第五个数据，它与数据4在规则内匹配，满足了数据4的期待，它期待的急迫程度为0。</p>
+<p>​    Push进第六个数据，它与数据3在规则内匹配，满足了数据3的期待，它期待的急迫程度为0。</p>
+<p>​    Push进第七个数据，它与数据2在规则内匹配，满足了数据2的期待，它期待的急迫程度为0。</p>
+<p>​    Push进第八个数据，它与数据1在规则内匹配，满足了数据1的期待，它期待的急迫程度为0。</p>
+<p>​    结束</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//代码描述</span></span><br><span class="line"><span class="function">Status <span class="title">CheckBracket_S</span><span class="params">(SqStack* S)</span></span>&#123;</span><br><span class="line">    <span class="comment">//判断输入的括号组是否匹配</span></span><br><span class="line">    <span class="keyword">char</span> ch=<span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span> number=<span class="number">1</span>;</span><br><span class="line">    ElemType* sup = S.base;</span><br><span class="line">    <span class="keyword">while</span>(<span class="number">1</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!ch)</span><br><span class="line">            <span class="built_in">puts</span>(<span class="string">&quot;please enter:&quot;</span>)</span><br><span class="line">        <span class="built_in">scanf</span>(<span class="string">&quot;%c&quot;</span>,ch);</span><br><span class="line">        Push(S,ch);<span class="comment">//从base开始存入ch</span></span><br><span class="line">        <span class="keyword">if</span>(number&lt;<span class="number">1</span>)</span><br><span class="line">            number++;</span><br><span class="line">        <span class="keyword">if</span>(number&gt;=<span class="number">1</span>)</span><br><span class="line">            check(sup.top.number);</span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(number==<span class="number">0</span>&amp;&amp;S.base==sup)</span><br><span class="line">            <span class="keyword">break</span>;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//CheckBracket_S</span></span><br><span class="line"><span class="comment">//算法问题:不通用,仅能用于输入,对传入的组没有效果</span></span><br><span class="line"><span class="comment">//改进想法:</span></span><br><span class="line"><span class="comment">/*	1. 重新设计CheckBracket_S使它仅对传入有效</span></span><br><span class="line"><span class="comment">	2. 在其他位置输入后再传入CheckBracket_S进行判断</span></span><br><span class="line"><span class="comment">*/</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//改进后</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">CheckBrackt</span><span class="params">(ElemType* pb, ElemType* pt)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//按规则比对是否匹配,匹配返回OK,否则返回ERROR</span></span><br><span class="line">	<span class="keyword">switch</span> (*pb) &#123;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">&#x27;(&#x27;</span>:</span><br><span class="line">		<span class="keyword">switch</span> (*pt) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>:</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> OK;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;]&#x27;</span>:</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line">	<span class="keyword">case</span> <span class="string">&#x27;[&#x27;</span>:</span><br><span class="line">		<span class="keyword">switch</span> (*pt) &#123;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;]&#x27;</span>:</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> OK;</span><br><span class="line">		<span class="keyword">case</span> <span class="string">&#x27;)&#x27;</span>:</span><br><span class="line"></span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		<span class="keyword">default</span>:</span><br><span class="line">			<span class="keyword">return</span> ERROR;</span><br><span class="line">		&#125;</span><br><span class="line">		<span class="keyword">break</span>;</span><br><span class="line"></span><br><span class="line">	&#125;</span><br><span class="line">&#125;<span class="comment">//CheckBrackt</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">CheckBracket_S</span><span class="params">(SqStack* S)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> number = StackLength(S)/<span class="number">2</span>;</span><br><span class="line">    ElemType* sup_b = S.base;</span><br><span class="line">    ElemType* <span class="keyword">sup_t</span> = S.top;</span><br><span class="line">    <span class="keyword">while</span>(sup_b!=<span class="keyword">sup_t</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!CheckBrackt(sup_b,<span class="keyword">sup_t</span>))</span><br><span class="line">            <span class="keyword">return</span> ERROR;</span><br><span class="line">        </span><br><span class="line">        sup_b++;</span><br><span class="line">        <span class="keyword">if</span>(sup_b==<span class="keyword">sup_t</span>)<span class="comment">//当循环中发生该情况是,匹配完成</span></span><br><span class="line">            <span class="keyword">return</span> OK;</span><br><span class="line">        <span class="keyword">sup_t</span>--;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//CheckBracket_S</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="行编辑"><a href="#行编辑" class="headerlink" title="行编辑"></a>行编辑</h4><p>功能:</p>
+<blockquote>
+<p>​    接受用户从终端输入的程序或数据，并存入用户的数据区。由于用户在终端输入时，不能保证不出差错，因此若在编辑程序中，“每接受一个字符即存入用户的数据区”这样的作法显然不是最恰当的。较好的做法是，设立一个输入缓冲区，用以接受用户输入的一行字符，然后逐行存入用户数据区，。允许用户输入出差错，并在发现有误时可以及时更正。例如，设置行无效符@和字无效符#</p>
+</blockquote>
+<p>例如输入：</p>
+<blockquote>
+<p>whli##ilr#e(s#*s)</p>
+<p>​    outcha@putchar(*s=#++)</p>
+</blockquote>
+<p>实际有效：</p>
+<blockquote>
+<p>while(*s)</p>
+<p>​    putchar(*s++)</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">LineEdit</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//利用字符栈S，从终端接受一行并传送至调用过程的数据区</span></span><br><span class="line">    InitStack(S);<span class="comment">//构造空栈S</span></span><br><span class="line">    ch = getchar();<span class="comment">//从终端接收第一个字符</span></span><br><span class="line">    <span class="keyword">while</span>(ch! = EOF)&#123;<span class="comment">//EOF为全文结束</span></span><br><span class="line">        <span class="keyword">while</span>(ch != EOF &amp;&amp; ch!=<span class="string">&#x27;\n&#x27;</span>)&#123;</span><br><span class="line">            <span class="keyword">switch</span>(ch)&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;#&#x27;</span>:Pop(S,c);<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;@&#x27;</span>:ClearStack(S);<span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">default</span>:Push(S,ch);</span><br><span class="line">            &#125;</span><br><span class="line">            ch =getchar();<span class="comment">//接收下一个字符</span></span><br><span class="line">        &#125;</span><br><span class="line">        TransmitStack(S);<span class="comment">//将从栈底到栈顶的栈内字符传递至调用过程的数据区</span></span><br><span class="line">        ClearStack(S);<span class="comment">//重置S为空栈</span></span><br><span class="line">        <span class="keyword">if</span>(ch != EOF)</span><br><span class="line">            ch = getchar();</span><br><span class="line">    &#125;</span><br><span class="line">    DestroyStack(S);<span class="comment">//该进程结束,释放栈所占用的存储空间</span></span><br><span class="line">&#125;<span class="comment">//LineEdit</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//代码来自本书示例</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="迷宫求解"><a href="#迷宫求解" class="headerlink" title="迷宫求解"></a>迷宫求解</h4><p>通常使用”穷举求解”的概念。</p>
+<blockquote>
+<p>从入口出发,顺某一方向向前探索,若能走通,则继续往前,顺某方向向前探索,若能走通,则继续往前走;否则沿原路退回</p>
+</blockquote>
+<p>显然需要一个用后进先出的结构来保存从入口到当前位置的路径.因此,在求迷宫通路的算法中应用”栈”,也是自然而然的事了。</p>
+<p>自然语言设计描述：</p>
+<blockquote>
+<p>假设“当前位置”指的是“在搜索过程中某一时刻所在途中某个方块位置“，则求迷宫中一条路径的算法的基本思想是：若当前位置“可通”，则纳入“当前路径”，并继续朝“下一位置”探索，即切换“下一位置”为“当前位置”，如此重复直至到达出口；若当前位置“不可通”则应顺着“来向”退回到“前一通道块”，然后朝着除“来向”之外的其他反省继续探索；若该通道块的四周四个方块均“不可通”，则应从“当前路径”上删除该通道块。所谓“下一位置”指的是“当前位置”四周4个方向上相邻的方块。假设以栈S记录“当前路径”，则栈顶中存放的是“当前路径上最后一个通道块”。由此，“纳入路径”的操作即为“当前位置入栈”；“从当前路径删除前一通道块”的操作即为出栈</p>
+</blockquote>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line">求迷宫中一条入口到出口的路径算法可简单描述如下:</span><br><span class="line"></span><br><span class="line">设定当前位置的初值为入口位置;</span><br><span class="line">do&#123;</span><br><span class="line">	若,当前位置可通</span><br><span class="line">	则&#123;</span><br><span class="line">		将当前位置插入栈顶;</span><br><span class="line">		若该位置是出口,则结束;</span><br><span class="line">		否则切换到当前位置的东邻方块为新的当前位置;</span><br><span class="line">	&#125;</span><br><span class="line">	否则&#123;</span><br><span class="line">		若,栈不空且栈顶位置尚有其他方向未探索,</span><br><span class="line">			则设定新的当前位置未沿顺时针方向旋转找到的栈顶位置的下一相邻块;</span><br><span class="line">		若栈不空但栈顶位置的四周均不可通,</span><br><span class="line">			则&#123;</span><br><span class="line">				删去栈顶位置;</span><br><span class="line">				若栈不空,则重新测试新的栈顶位置,直到找到一个可通相邻块或出栈至栈空;</span><br><span class="line">			&#125;</span><br><span class="line">	&#125;</span><br><span class="line">&#125;while(栈不空)</span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<p>说明:</p>
+<blockquote>
+<p>所谓当前位置可通,指的是未曾走过的道路块,即要求该方块位置不仅是通道块,而且既不能在当前路径上(否则所求路径就不是简单路径),也不是曾经纳入过路径的通道块(否则只能在死胡同内转圈)</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ord;		<span class="comment">//通道块在路径上的&quot;序号&quot;</span></span><br><span class="line">    PosTyep seat;	<span class="comment">//通道块在迷宫中的&quot;坐标位置&quot;</span></span><br><span class="line">    <span class="keyword">int</span> di;			<span class="comment">//从此通道块走向下一通道块的&quot;方向&quot;</span></span><br><span class="line">&#125;SElemType;			<span class="comment">//栈的元素类型</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">MazePath</span><span class="params">(MazeType maze,PosType start,PosType end)</span></span>&#123;</span><br><span class="line">    <span class="comment">/*若迷宫maze中存在从入口start到出口end的道路,则求得一条存放在栈中的(从栈底到栈顶)</span></span><br><span class="line"><span class="comment">    ,并返回TRUE,否则返回FALSE*/</span></span><br><span class="line">    InitStack(S);curpos = start;		<span class="comment">//设置&quot;当前位置&quot;为&quot;起始位置&quot;</span></span><br><span class="line">    curstep = <span class="number">1</span>;						<span class="comment">//探索第一步</span></span><br><span class="line">    <span class="keyword">do</span>&#123;</span><br><span class="line">        <span class="keyword">if</span>(Pass(curpos))&#123;					<span class="comment">//当前位置是可以通过的,即是未曾走过的通道块</span></span><br><span class="line">            FootPrint(curpos);					<span class="comment">//留下足迹</span></span><br><span class="line">            e = (curstep,curpos,<span class="number">1</span>);				<span class="comment">//===该目的暂时未知===</span></span><br><span class="line">            Push(S,e);							<span class="comment">//加入路径</span></span><br><span class="line">            <span class="keyword">if</span>(curpos == end) <span class="keyword">return</span> (TRUE);	<span class="comment">//到达终点</span></span><br><span class="line">            curpos = NextPos(curpos, <span class="number">1</span>);		<span class="comment">//下一位置是当前位置的东邻</span></span><br><span class="line">            curstep++;							<span class="comment">//探索下一步</span></span><br><span class="line">        &#125;<span class="comment">//if</span></span><br><span class="line">        <span class="keyword">else</span>&#123;								<span class="comment">//当前位置不可通过</span></span><br><span class="line">            <span class="keyword">if</span>(!StackEmpty(S))&#123;</span><br><span class="line">                Pos(S,e);</span><br><span class="line">                <span class="keyword">while</span>(e.di == <span class="number">4</span> &amp;&amp; !StackEmpty(S))&#123;</span><br><span class="line">                    MarkPrint(e.seat);Pos(S,e);		<span class="comment">//留下不能通过的标记</span></span><br><span class="line">                &#125;<span class="comment">//while</span></span><br><span class="line">                <span class="keyword">if</span>(e.di&lt;<span class="number">4</span>)&#123;</span><br><span class="line">                    e.di++;Push(S,e);				<span class="comment">//换下一个方向探索</span></span><br><span class="line">                    curpos = NextPos(e.seat,e.di);	<span class="comment">//设定当前位置是该新方向的相邻块</span></span><br><span class="line">                &#125;<span class="comment">//if</span></span><br><span class="line">            &#125;<span class="comment">//if</span></span><br><span class="line">        &#125;<span class="comment">//else</span></span><br><span class="line">    &#125;<span class="keyword">while</span>(!StackEmpty(S));</span><br><span class="line">    <span class="keyword">return</span> (FALSE);</span><br><span class="line">    </span><br><span class="line">    </span><br><span class="line">&#125;<span class="comment">//MazePath</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//代码来自本书示例</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="表达式求值"><a href="#表达式求值" class="headerlink" title="表达式求值"></a>表达式求值</h4><blockquote>
+<p>原理:运算符优先</p>
+</blockquote>
+<blockquote>
+<p>任何一个表达式都是由操作数、运算符、和界限符组成。</p>
+<p>我们把运算符和界限符统称为算符，他们构成的集合命名为OP。根据运算规则</p>
+<blockquote>
+<ol>
+<li>先乘除后加减</li>
+<li>从左算到右</li>
+<li>先括号内后括号外</li>
+</ol>
+</blockquote>
+<p>在运算的每一步中，任意两个相继出现的θ<del>1</del>和θ<del>2</del>之间的优先关系至多是下面的三种关系之一</p>
+<blockquote>
+<p>θ<del>1</del> &lt; θ<del>2</del> </p>
+</blockquote>
+<blockquote>
+<p>θ<del>1</del> = θ<del>2</del> </p>
+</blockquote>
+<blockquote>
+<p>θ<del>1</del> &gt; θ<del>2</del> </p>
+</blockquote>
+<p>假定输入的表达式没有语法错误</p>
+<p>为了实现优先算法,可以使用两个工作栈.一个称作OPTR,用于寄存运算符;另一个称作OPND,用于寄存操作数或运算结果。</p>
+<p>算法的基本思想是：</p>
+<blockquote>
+<ol>
+<li>首先置操作数为空栈，表达式起始符“#”为运算符的栈底元素；</li>
+<li>依次读入表达式中的每个字符，若是操作数，则进IPND栈，若是运算符则和OPTR栈的栈顶运算符比较优先权后做相应操作，直至整个表达式求值完毕（即：“#” == “#”）</li>
+</ol>
+</blockquote>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法描述</span></span><br><span class="line"></span><br><span class="line"><span class="function">OperandTyep <span class="title">EvaluateExpression</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//算术表达式求值的算符优先算法。设OPTR和OPND分别为运算符栈和运算数栈，</span></span><br><span class="line">    <span class="comment">//OP为运算符集合</span></span><br><span class="line">    InitStack(OPTR); Push(OPTR,<span class="string">&#x27;#&#x27;</span>);</span><br><span class="line">    InitStack(OPND); c = getchar();</span><br><span class="line">    <span class="keyword">while</span>(c != <span class="string">&#x27;#&#x27;</span>||GetTop(OPTR) != <span class="string">&#x27;#&#x27;</span>)&#123;</span><br><span class="line">        <span class="keyword">if</span>(!In(c,OP))&#123;Push(OPND,C);C = getchar();&#125;</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            <span class="keyword">switch</span>(Precede(GetTop(OPTR),C))&#123;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&lt;&#x27;</span>:</span><br><span class="line">                    Push(OPTR,c); c = getchar();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;=&#x27;</span>:</span><br><span class="line">                    Pop(OPTR,x); c = getchar();</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">                <span class="keyword">case</span> <span class="string">&#x27;&gt;&#x27;</span>:</span><br><span class="line">                    Pop(OPTR,theta);</span><br><span class="line">                    Pop(OPND,b); Pop(OPND,a);</span><br><span class="line">                    Push(OPND,Operate(a,theta,b));</span><br><span class="line">                    <span class="keyword">break</span>;</span><br><span class="line">            &#125;<span class="comment">//switch</span></span><br><span class="line">    &#125;<span class="comment">//while</span></span><br><span class="line">    <span class="keyword">return</span> GetTop(OPND);</span><br><span class="line">&#125;<span class="comment">//EvaluateExpression</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//代码来自本书示例</span></span><br></pre></td></tr></table></figure>
+
+<h3 id="栈与递归的实现"><a href="#栈与递归的实现" class="headerlink" title="栈与递归的实现"></a>栈与递归的实现</h3><p>递归是程序设计中一个强有力的工具,有很多数学函数是递归定义的,例如:<br>$$<br>Fact(n)= \begin{cases}<br>1, &amp; \text {若 $n=0$} \<br>n\cdot Fact(n-1), &amp; \text{若 $n&gt;0$}<br>\end{cases}\tag{阶乘函数}<br>$$</p>
+<p>$$<br>Fib(n)= \begin{cases}<br>0, &amp; \text {若 $n=0$} \<br>1, &amp; \text{若 $n=1$} \<br>Fib(n-1)+Fib(n-2), &amp; \text{其他情况} \<br>\end{cases}\tag{2阶Fibonacci数列}<br>$$</p>
+<h4 id="n阶Hanoi塔问题"><a href="#n阶Hanoi塔问题" class="headerlink" title="n阶Hanoi塔问题"></a>n阶Hanoi塔问题</h4><blockquote>
+<p>假设有三个分别命名为X、Y、Z的塔座，在塔座X上有n个直径大小各不相同、以小到大编号为1，2，···，n的圆盘。现要求将X轴上的n个圆盘移至塔座Z上并仍然按照同样顺序叠排，圆盘移动时遵循以下规则：</p>
+<blockquote>
+<ol>
+<li>每次只能移动一个圆盘；</li>
+<li>圆盘可以插在X、Y、Z中的任意一座塔上；</li>
+<li>在任何时刻都不能将一个较大的圆盘压在较小的圆盘上</li>
+</ol>
+</blockquote>
+<p>如何实现移动圆盘的操作？</p>
+<p>当n=1时，只要将编号为1的圆盘从塔座X直接移至塔座Z上即可。</p>
+<p>当n&gt;1时，需要利用塔座Y作辅助塔座，若能设法将压在编号为n的圆盘之上的n-1个圆盘从塔座X依照法则移至塔座Y上，则可先将编号为n的圆盘从塔座X移至塔座Z上，然后重复这个过程直到Y上的n-1个圆盘移至塔座Z。</p>
+<blockquote>
+<p>如果将n-1个圆盘从一个塔座移至另一个塔座的问题是一个和原问题具有相同特征属性的问题，只是问题的规模小1，因此可以同解。</p>
+</blockquote>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//算法描述</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">hanoi</span><span class="params">(<span class="keyword">int</span> n,<span class="keyword">char</span> x,<span class="keyword">char</span> y,<span class="keyword">char</span> z)</span></span>&#123;</span><br><span class="line">    <span class="comment">//将塔座X上按直径由小到大且自上而下编号为1到n的n个圆盘按规则搬到塔座Z,y作辅助塔</span></span><br><span class="line">    <span class="comment">//搬动操作Move(x,n,z)可定义为(c是处置为0的全局变量,对搬动计数);</span></span><br><span class="line">    <span class="comment">//printf(&quot;%i.Move disk %i from %c to %c\n&quot;,++c,n,x,z);</span></span><br><span class="line">    <span class="keyword">if</span>(n == <span class="number">1</span>)</span><br><span class="line">        move(x,<span class="number">1</span>,z);</span><br><span class="line">    <span class="keyword">else</span>&#123;</span><br><span class="line">        hanoi(n<span class="number">-1</span>,x,z,y);<span class="comment">//将x上编号为1至n-1的圆盘移动到y,z作辅助塔</span></span><br><span class="line">        move(x,n,z);<span class="comment">//将编号为n的圆盘从x移动到z</span></span><br><span class="line">        hanoi(n<span class="number">-1</span>,y,x,z);<span class="comment">//将y上编号为1至n-1的圆盘移动到z,x作辅助塔</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//hanoi</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//代码来自本书示例</span></span><br></pre></td></tr></table></figure>
+
+<p>一个递归函数的执行需要进行多次的自我调用</p>
+<p>任意两个函数间的调用与汇编程序设计中主程序和子程序之间的连接及信息交换类似</p>
+<blockquote>
+<p>通常，当一个函数的运行期间调用另一个函数时，在运行被调用函数之前，系统需要完成三件事：</p>
+<blockquote>
+<ol>
+<li>将所有的实在参数、返回地址等信息传递给被调用函数保存；</li>
+<li>为被调用函数的局部变量分配存储区；</li>
+<li>将控制转移到被调用函数的入口；</li>
+</ol>
+</blockquote>
+<p>而从被调用函数返回调用函数之前，也有三个工作：</p>
+<blockquote>
+<ol>
+<li>保存被调函数的计算结果；</li>
+<li>释放被调函数的数据区；</li>
+<li>依照被调函数保存的返回地址将控制转移到调用函数；</li>
+</ol>
+</blockquote>
+<p>当有多个函数构成嵌套调用时，按照“后调用，先返回”的原则。（即“栈”实现）</p>
+</blockquote>
+<h5 id="想法"><a href="#想法" class="headerlink" title="想法"></a>想法</h5><p>​    递归函数的对自己的调用可以理解为一个出入口,函数本身不具备处理问题的能力,结果是通过设置条件来让它达成条件前回溯某个过程。</p>
+<p>​    我的理解来说,就类似于通过某个过程求未知数，然后利用未知数还原方程。</p>
+<h3 id="队列"><a href="#队列" class="headerlink" title="队列"></a>队列</h3><blockquote>
+<p>和栈相反，队列（queue）是一种先进先出的线性表。它只允许在表的一端进行插入，而在另一端删除元素。这和生活中的排队是一致的。在队列中，允许插入的一段叫做队尾（rear），允许删除的一端称为队头（front）。</p>
+<p>最典型的例子就是操作系统中的作业排队。</p>
+</blockquote>
+<h4 id="队列的抽象数据类型定义："><a href="#队列的抽象数据类型定义：" class="headerlink" title="队列的抽象数据类型定义："></a>队列的抽象数据类型定义：</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br></pre></td><td class="code"><pre><span class="line">ADT Queue&#123;</span><br><span class="line">	数据对象:D:&#123;a[i]|a[i]∈ElemSet,i = 1，2,···，n，n ≥ 0&#125;</span><br><span class="line">	数据关系:R1 = &#123;＜a[i-1]|a[i-1],a[i]∈D,i = 2，···，n&#125;</span><br><span class="line">				约定其中a[i]端为队头,a[n]端为队尾</span><br><span class="line">	基本操作:</span><br><span class="line">		InitQueue(&amp;Q)</span><br><span class="line">			操作结果:构造一个空队列</span><br><span class="line">		DestroyQueue(&amp;Q)</span><br><span class="line">			初始条件:队列Q已存在</span><br><span class="line">			操作结果:销毁队列Q,使得队列Q不再存在</span><br><span class="line">		ClearQueue(&amp;Q)</span><br><span class="line">			初始条件:队列Q已存在</span><br><span class="line">			操作结果:将队列Q重置为空队列</span><br><span class="line">		QueueEmpty(Q)</span><br><span class="line">			初始条件:队列Q已存在</span><br><span class="line">			操作结果:若Q为空队列,返回TRUE,否则返回FALSE</span><br><span class="line">		QueueLength(Q)</span><br><span class="line">			初始条件:队列Q已存在</span><br><span class="line">			操作结果:返回Q的元素个数,即队列的长度</span><br><span class="line">		GetHead(Q,&amp;e)</span><br><span class="line">			初始条件:队列Q为非空队列</span><br><span class="line">			操作结果:用e返回Q的队头元素</span><br><span class="line">		EnQueue(&amp;Q,e)</span><br><span class="line">			初始条件:队列Q已存在</span><br><span class="line">			操作结果:插入元素e为Q的新的队尾元素</span><br><span class="line">		DeQueue(&amp;Q,&amp;e)</span><br><span class="line">			初始条件:Q为非空队列</span><br><span class="line">			操作结果:删除Q的头元素,并用e返回</span><br><span class="line">		QueueTraverse(Q,visit())</span><br><span class="line">			初始条件:Q已存在且非空</span><br><span class="line">			操作结果:从队头到队尾,依次对Q的每个元素调用visit().一旦visit()失败,则操作失败</span><br><span class="line">&#125;ADT Queue</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>除了栈和队列之外还有一种限定性数据结构是<strong>双向队列</strong>(deque)。</p>
+<blockquote>
+<p>双向队列是限定<strong>插入和删除操作在表的两端进行</strong>的线性表。这两端分别称为端点1和端点2。</p>
+<p>在实际使用中，还可以有<strong>输出受限的双端队列</strong>（即一个端点允许插入和删除，另一个端点只允许插入的双端队列）和输入受限的双端队列（即一个端点允许插入和删除，另一个端点只允许删除的双端队列）。</p>
+</blockquote>
+</blockquote>
+<h4 id="链队列——队列的链式表示和实现"><a href="#链队列——队列的链式表示和实现" class="headerlink" title="链队列——队列的链式表示和实现"></a>链队列——队列的链式表示和实现</h4><blockquote>
+<p>用链表表示的队列叫<strong>链队列</strong></p>
+<blockquote>
+<ol>
+<li>需要头尾指针</li>
+<li>属于单链表的特殊操作</li>
+</ol>
+</blockquote>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">QNode</span>&#123;</span></span><br><span class="line">    QElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> *<span class="title">next</span>;</span></span><br><span class="line">&#125;QNode,*QueuePtr;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    QueuePtr front;</span><br><span class="line">    QueuePtr next;</span><br><span class="line">&#125;LinkQueue;</span><br></pre></td></tr></table></figure>
+
+<h4 id="循环队列——队列的顺序表示和实现"><a href="#循环队列——队列的顺序表示和实现" class="headerlink" title="循环队列——队列的顺序表示和实现"></a>循环队列——队列的顺序表示和实现</h4><h5 id="顺序循环队列"><a href="#顺序循环队列" class="headerlink" title="顺序循环队列"></a>顺序循环队列</h5><p>根据地址的物理关系建立顺序队列，除了本身的元素外，还需要附设两个指针front和rear分别指向队头和队尾。</p>
+<blockquote>
+<p>在此我们约定：</p>
+<blockquote>
+<p>初始化建空队列时，令front=rear=0，每当插入新的队列元素时，“尾指针增加1”；每当删除队列头部元素时，“头指针增加1”。</p>
+</blockquote>
+<p>这样在<strong>非空队列中</strong>，头指针始终指向队列头元素，尾指针指向队列尾元素的下一个位置。</p>
+</blockquote>
+<p>例如：</p>
+<figure class="highlight cpp"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    ElemType* front;</span><br><span class="line">    ElemType* rear;</span><br><span class="line">&#125;Queue;</span><br><span class="line"><span class="keyword">void</span> test1&#123;</span><br><span class="line">    <span class="keyword">int</span> number[<span class="number">6</span>];</span><br><span class="line">    <span class="keyword">int</span> e;</span><br><span class="line">    Queue Link;</span><br><span class="line">    Link.rear = Link.front = number;<span class="comment">//建立队列</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">1</span>); Link.rear++;</span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">2</span>); Link.rear++;</span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">3</span>); Link.rear++;<span class="comment">//计入数据1,2,3</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">DeQueue</span>(&amp;Q,&amp;e); Link.front++;</span><br><span class="line">    <span class="built_in">DeQueue</span>(&amp;Q,&amp;e); Link.front++;<span class="comment">//进行两次头元素删除，每次将值存于e</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//当前 Q = &#123;空,空,3,空,空,空&#125;;且front指向number[2]=3,rear指向number[3]=空</span></span><br><span class="line">    <span class="comment">//e的值是2</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">4</span>); Link.rear++;</span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">5</span>); Link.rear++;</span><br><span class="line">    <span class="built_in">EnQueue</span>(&amp;Q,<span class="number">6</span>); Link.rear++;<span class="comment">//计入数据4,5,6</span></span><br><span class="line">    </span><br><span class="line">    <span class="built_in">DeQueue</span>(&amp;Q,&amp;e); Link.front++;</span><br><span class="line">    <span class="built_in">DeQueue</span>(&amp;Q,&amp;e); Link.front++;<span class="comment">//进行两次头元素删除，每次将值存于e</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//当前 Q = &#123;空,空,空,空,5,6&#125;;且front指向5,rear指向number[5]的下一位非法空间</span></span><br><span class="line">    <span class="comment">//e的值是4</span></span><br><span class="line">    </span><br><span class="line">    <span class="comment">//思考:(一下内容仅在队列的性质内讨论)</span></span><br><span class="line">    <span class="comment">/*</span></span><br><span class="line"><span class="comment">    首先,我们知道数组处于局部区,空间一经创建无法开辟或减少</span></span><br><span class="line"><span class="comment">    然后,队列的性质下不允许我们将front推回,且当前继续使用rear会导致数据越界</span></span><br><span class="line"><span class="comment">    但是,我们可以采用循环的概念,臆造这个线性结构属于环形,即rear现在正指向number[0];</span></span><br><span class="line"><span class="comment">    */</span></span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>循环下，还留有一个问题：判断队列“满”；</p>
+<p>有两种可行方式：</p>
+<blockquote>
+<ol>
+<li>另设一个标志位以区别队列是“空”还是“满”；</li>
+<li>少用一个空间元素，约定“队列头指针在队列尾指针的下一位置上”作为“满”状态的标志</li>
+</ol>
+</blockquote>
+<p>思考：</p>
+<p>​    在队列的顺序表示中：</p>
+<ol>
+<li>局部域的数组并不能使用动态分配扩容，循环队列对于该种情况可以节省空间，但是需要提前知道数组大小。</li>
+<li>我认为动态分配的数组在队列的使用中并不合适，既不能发挥扩容的好处，也并不能发挥物理逻辑上连续的优点。</li>
+</ol>
+<h3 id="离散事件模拟"><a href="#离散事件模拟" class="headerlink" title="离散事件模拟"></a>离散事件模拟</h3><h4 id="银行业务模拟"><a href="#银行业务模拟" class="headerlink" title="银行业务模拟"></a>银行业务模拟</h4><blockquote>
+<p>现在需要编制一个程序模拟银行的这种业务活动并计算一天中客户在银行逗留的平均时间;</p>
+<blockquote>
+<p>为了计算这个平均时间,我们自然需要掌握每个客户的到达银行和离开银行的时刻,用后者减去前者得到客户的逗留时间,将所有逗留时间总和与进入银行的客户总数相除便可以得到平均时间;</p>
+</blockquote>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Bank_Simulation</span><span class="params">(<span class="keyword">int</span> CloseTime)</span></span>&#123;</span><br><span class="line">    <span class="comment">//银行业务模拟,统计一天内客户在银行逗留的平均时间</span></span><br><span class="line">    </span><br><span class="line">    OpenForDay();								<span class="comment">//初始化</span></span><br><span class="line">    <span class="keyword">while</span>(MoreEvent)&#123;</span><br><span class="line">        EventDrived(OccurTime,EventType);		<span class="comment">//事件驱动</span></span><br><span class="line">        <span class="keyword">switch</span>(EventType)&#123;</span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;A&#x27;</span>:CustomerArrived();<span class="keyword">break</span>;		<span class="comment">//处理客户到达事件</span></span><br><span class="line">            <span class="keyword">case</span> <span class="string">&#x27;B&#x27;</span>:CustomerDeparture();<span class="keyword">break</span>;		<span class="comment">//处理客户离开事件</span></span><br><span class="line">            <span class="keyword">default</span>:Invalid();</span><br><span class="line">        &#125;<span class="comment">//switch</span></span><br><span class="line">    &#125;<span class="comment">//while</span></span><br><span class="line">    CloseForDay();								<span class="comment">//计算平均逗留时间</span></span><br><span class="line">&#125;<span class="comment">//Bank_Simulation</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//代码来自书本_算法3.6</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>上述算法处理的主要对象是”事件”,事件的主要信息是事件类型和事件发生的时刻.算法中处理的事件有两类:</p>
+<blockquote>
+<p>一类是客户到达事件;另一类是客户离开事件</p>
+</blockquote>
+<p>前一类事件发生的时刻随客户到来自然形成;后一类事件发生时刻则有客户事物所需时间和等待所耗决定</p>
+<blockquote>
+<p>由于程序驱动时按事件发生时刻的先后顺序进行,则事件表应是有序表,期主要操作时插入和删除事件</p>
+</blockquote>
+</blockquote>
+<blockquote>
+<p>模拟程序还需要另一种数据结构时表示客户排队的队列，由于前面假设银行有四个窗口，因此程序中需要四个队列，队列中有关客户的主要信息是客户到达的时刻和客户办理事物所需的时间。每个队列中的队头是正在办理的客户，办完离开队列的时刻就是即将发生的客户离开事件的时刻，这就是说，对每个队头客户都存在一个将要驱动的客户离开事件。因此，在任何时刻发生的事件只有下列5种可能：</p>
+<blockquote>
+<ol>
+<li>新客户到达</li>
+<li>一号窗离开</li>
+<li>二号窗离开</li>
+<li>三号窗离开</li>
+<li>四号窗离开</li>
+</ol>
+</blockquote>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> OccurTime;		<span class="comment">//事件发生时间</span></span><br><span class="line">    <span class="keyword">int</span> NType;			<span class="comment">//事件类型,0表示到达,1至4表示对应窗口的离开事件</span></span><br><span class="line">&#125;Event,ElemType;		<span class="comment">//事件类型,有序链表LinkList的数据元素类型</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> LinkList EventList;		<span class="comment">//事件链表类型定义为有序链表</span></span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    <span class="keyword">int</span> ArrivalTime;	<span class="comment">//到达时刻</span></span><br><span class="line">    <span class="keyword">int</span> Duration;		<span class="comment">//办理事物所需时间</span></span><br><span class="line">&#125;QElemType;				<span class="comment">//队列的数据元素类型</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在实际的银行中,客户到达的时刻和办理事件的所需时间都是随机的,在模拟程序中可用随机数来代替,不失一般性，假设第一个顾客进门时刻为0，即是模拟程序员处理的第一个事件，之后每个客户到达的时刻在前一个客户到达时设定。</p>
+<blockquote>
+<p>因此在客户到达事件发生时需要先产生两个随机数：</p>
+<ol>
+<li>此时刻搭搭的客户办理时间durtime</li>
+<li>下一个客户的到达时间entertime</li>
+</ol>
+</blockquote>
+<p>假设当前事件的发生时刻为occurtime,则下一个客户到达事件发生的时刻为occurtime+intertime。由此应产生一个新的客户到达事件插入事件表；刚到达的客户则应插入到当前所含元素最少的队列中；若该队列在插入前为空，则还应产生一个客户离开事件插入事件表。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//主要变量</span></span><br><span class="line">EventList ev;				<span class="comment">//事件表</span></span><br><span class="line">Event en;					<span class="comment">//事件</span></span><br><span class="line">LinkQueue q[<span class="number">5</span>];				<span class="comment">//4个客户队列</span></span><br><span class="line">QElemType customer;			<span class="comment">//客户记录</span></span><br><span class="line"><span class="keyword">int</span> TotalTime,CustomerNum;	<span class="comment">//累计客户逗留时间,客户数</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(Event a,Event b)</span></span>;</span><br><span class="line">	<span class="comment">//依事件a的发生时刻&lt;,=,&gt;事件b的发生时刻分别返回-1,0,1</span></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">OpenForDay</span><span class="params">()</span></span>&#123;</span><br><span class="line">    TotalTime = <span class="number">0</span>; CustomerNum = <span class="number">0</span>;					<span class="comment">//初始化累计时间和客户数</span></span><br><span class="line">    InitList(ev);									<span class="comment">//初始化事件链表</span></span><br><span class="line">    en.OccurTime = <span class="number">0</span>; en.NType = <span class="number">0</span>;					<span class="comment">//设定第一个客户到达事件</span></span><br><span class="line">    OrderInsert(ev,en,cmp);							<span class="comment">//插入事件表</span></span><br><span class="line">    <span class="keyword">for</span>(i = i;i&lt;=<span class="number">4</span>;++i)	InitQueue(q[<span class="number">5</span>]);			<span class="comment">//置空队列</span></span><br><span class="line">&#125;<span class="comment">//OpenForDay</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CustomerArrived</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//处理客户到达事件</span></span><br><span class="line">    ++CustomerNum;</span><br><span class="line">    Random(durtime,intertime);						<span class="comment">//生成随机数</span></span><br><span class="line">    t = en.OccurTime + intertime;</span><br><span class="line">    <span class="keyword">if</span>(t&lt;CloseTime)</span><br><span class="line">        OrederInsert(ev,(t,<span class="number">0</span>),cmp);</span><br><span class="line">    i = Minimum(q);									<span class="comment">//求长度最短队列</span></span><br><span class="line">    EnQueue(q[i],(en.OccurTime,durtime));</span><br><span class="line">    <span class="keyword">if</span>(QueueLength(q[i]) == <span class="number">1</span>)</span><br><span class="line">        OrderInsert(ev,(en.OccurTime+durtime,i),cmp);</span><br><span class="line">    												<span class="comment">//设定第i队列的一个离开事件并插入</span></span><br><span class="line">&#125;<span class="comment">//CustomerArrived</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">CustomerDeparture</span><span class="params">()</span></span>&#123;</span><br><span class="line">    <span class="comment">//处理客户离开事件</span></span><br><span class="line">    i = en.NType; DelQueue(q[i],customer);			<span class="comment">//删除第i队列的排头客户</span></span><br><span class="line">    TotalTime += en.OccurTime - customer.ArrivalTime;</span><br><span class="line">    												<span class="comment">//累计客户逗留时间</span></span><br><span class="line">    <span class="keyword">if</span>(!QueueEmpty(q[i]))&#123;							<span class="comment">//设定第i队列的一个离开事件并插入</span></span><br><span class="line">        GetHead(q[i],customer);</span><br><span class="line">        OrderInsert(ev,OccurTime + curtomer.Duration,i),(*cmp());</span><br><span class="line">    &#125;</span><br><span class="line">&#125;<span class="comment">//CustomerDeparture</span></span><br><span class="line"></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">Bank_Simulation</span><span class="params">(<span class="keyword">int</span> CloseTime)</span></span>&#123;</span><br><span class="line">    OpenForDay();</span><br><span class="line">    <span class="keyword">while</span>(!ListEmpty(ev))&#123;</span><br><span class="line">        DelFirst(GetHead(ev),p); en = GetCurElem(p);</span><br><span class="line">        <span class="keyword">if</span>(en.NType == <span class="number">0</span>)</span><br><span class="line">            CustomerArrived();						<span class="comment">//处理客户到达事件</span></span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            CustomerDeparture();					<span class="comment">//处理客户离开事件</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//计算平均逗留时间</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;```&quot;</span>);</span><br><span class="line">&#125;<span class="comment">//Bank_Simulation</span></span><br></pre></td></tr></table></figure>
+
+
+
+<h2 id="第三章-串"><a href="#第三章-串" class="headerlink" title="第三章 串"></a>第三章 串</h2><p>**串(string)**是零个或多个字符组成的有限序列,一般记作<code>s=&#39;a1a2...an&#39;</code>。</p>
+<h3 id="相关名词"><a href="#相关名词" class="headerlink" title="相关名词"></a>相关名词</h3><blockquote>
+<p>串的长度</p>
+<blockquote>
+<p>串中的字符数目</p>
+<p>零个字符的串称为空串(null string),写作Ф</p>
+</blockquote>
+<p>串的子串</p>
+<blockquote>
+<p>串中任意个连续的字符组成的子序列</p>
+</blockquote>
+<p>串的位置</p>
+<blockquote>
+<p>字符在串中的序号</p>
+</blockquote>
+<p>空格串</p>
+<blockquote>
+<p>由一个或多个空格组成的串</p>
+</blockquote>
+</blockquote>
+<h3 id="串的性质"><a href="#串的性质" class="headerlink" title="串的性质"></a>串的性质</h3><blockquote>
+<p>串的逻辑结构与线性表极为相似,区别仅在于串的数据对象约束为字符集。</p>
+<p>串的基本操作与线性表有很大差异:</p>
+<blockquote>
+<p>在线性表的基本操作中，大多以“单个元素”作为操作对象，而在串的操作中往往以“串的整体”作为操作对象</p>
+</blockquote>
+</blockquote>
+<h2 id="第四章-数组和广义表"><a href="#第四章-数组和广义表" class="headerlink" title="第四章 数组和广义表"></a>第四章 数组和广义表</h2><h3 id="数组"><a href="#数组" class="headerlink" title="数组"></a>数组</h3><h3 id="广义表"><a href="#广义表" class="headerlink" title="广义表"></a>广义表</h3><h2 id="第五章-树和二叉树"><a href="#第五章-树和二叉树" class="headerlink" title="第五章 树和二叉树"></a>第五章 树和二叉树</h2><h2 id="第六章-图"><a href="#第六章-图" class="headerlink" title="第六章 图"></a>第六章 图</h2><h2 id="第七章-动态存储管理"><a href="#第七章-动态存储管理" class="headerlink" title="第七章 动态存储管理"></a>第七章 动态存储管理</h2><h2 id="第八章-查找"><a href="#第八章-查找" class="headerlink" title="第八章 查找"></a>第八章 查找</h2><h2 id="第九章-内部排序"><a href="#第九章-内部排序" class="headerlink" title="第九章 内部排序"></a>第九章 内部排序</h2><h2 id="第十章-外部排序"><a href="#第十章-外部排序" class="headerlink" title="第十章 外部排序"></a>第十章 外部排序</h2><h2 id="第十一章-文件"><a href="#第十一章-文件" class="headerlink" title="第十一章 文件"></a>第十一章 文件</h2><h1 id="其他来源的学习记录"><a href="#其他来源的学习记录" class="headerlink" title="其他来源的学习记录"></a>其他来源的学习记录</h1><h2 id="C-C-不同文件夹下包含头文件的方法及-include的使用"><a href="#C-C-不同文件夹下包含头文件的方法及-include的使用" class="headerlink" title="C/C++不同文件夹下包含头文件的方法及#include的使用"></a>C/C++不同文件夹下包含头文件的方法及#include的使用</h2><blockquote>
+<p>本文主要介绍了如何不同文件夹下使用预处理器指示符#include。</p>
+<p>假设我们有如下一个工程，其中包含了几个源代码文件和头文件。其中main.c是主源代码文件，里面包含main函数。<br><img src="https://img-my.csdn.net/uploads/201208/04/1344036597_5069.png" alt="img"><br>在base中包含：func3.h，func3.c，文件夹main和文件夹func4<br>在main中包含：main.c，func1.h，func1.c和文件夹func2。<br>在func2中包含：func2.h和func2.c<br>在func4中包含：func4.h和func4.c</p>
+<p>在main中包含头文件func1.h：#include<br>“func1.h”<br>这里main.c和func1.h在同一个文件下。</p>
+<p>在main中包含头文件func2.h：#include<br>“func2\func2.h”<br>这里main.c和func2.h不在在同一个文件下，但文件夹func2和main.c同级。”func2\func2.h”表示main.c这一级func2文件夹下的func2.h头文件。</p>
+<p>在main中包含头文件func3.h：#include<br>“..\func3.h”<br>这里main.c和func3.h不在在同一个文件下，但文件夹main和func3.h同级。”..\func3.h”表示main.c上一级文件（base）夹下的func3.h头文件。</p>
+<p>在main中使用func4.h：#include<br>“..\func4\func4.h”<br>这里main.c和func4.h不在在同一个文件下，但文件夹main和文件夹func4同级。”..\func4\func4.h”表示main.c上一级文件夹（base）下的func4文件夹下的func4.h头文件。</p>
+<p>注1：DOS命令中”cd..”和这里的”..”有类似的作用。<br>注2：”#include”<br>可读作 “包含当前源代码或头文件”</p>
+<p>“..” 可读作<br>“上一级文件夹”</p>
+<p>“” 可读作<br>“下的”<br>“func4” 可读作<br>“func4文件夹”</p>
+<p>“” 可读作<br>“下的”<br>“func4.h” 可读作<br>“func4头文件”<br>连起来就是:<br>“包含当前源代码或头文件上一级文件夹下的func4文件夹下的func4头文件”。<br>注3： </p>
+<p>用#include<br>加载头文件时，”./“表示当前目录，”../“表示当前目录的上一级目录。<strong>注意！这个当前目录不是工程所在的目录，而是该文件所在的目录。</strong>在include中，’/‘与’&#39;的功能貌似一样，#include<br>“../math/Vector3.h”与#include “..\math\Vector3.h”也貌似等价。</p>
+<p>在字符串中，’&#39;是转义字符，要表示’&#39;,在字符串中应写为’\‘，因此”../A/B/C.exe”与 “..\A\B\C.exe”等价。</p>
+<p>参考链接<br><a target="_blank" rel="noopener" href="http://topic.csdn.net/u/20101125/22/15af528d-d417-4f6b-8fa9-565e3d980eb2.html">http://topic.csdn.net/u/20101125/22/15af528d-d417-4f6b-8fa9-565e3d980eb2.html</a><br><a target="_blank" rel="noopener" href="http://blog.csdn.net/zlwzlwzlw/archive/2009/12/07/4955560.aspx">http://blog.csdn.net/zlwzlwzlw/archive/2009/12/07/4955560.aspx</a><br><a target="_blank" rel="noopener" href="http://hi.baidu.com/paladin1893/blog/item/8dab19510325586b843524e1.html">http://hi.baidu.com/paladin1893/blog/item/8dab19510325586b843524e1.html</a></p>
+</blockquote>
+<p>上述方法来自:<a target="_blank" rel="noopener" href="https://blog.csdn.net/szlcw1/article/details/23023991">https://blog.csdn.net/szlcw1/article/details/23023991</a></p>
+<h2 id="数组类算法"><a href="#数组类算法" class="headerlink" title="数组类算法"></a>数组类算法</h2><h2 id="树"><a href="#树" class="headerlink" title="树"></a>树</h2><p><strong>本节引用的内容自LeetCode摘录</strong></p>
+<p>LeetCode网址:<a target="_blank" rel="noopener" href="https://leetcode-cn.com/">https://leetcode-cn.com/</a></p>
+<h3 id="树的概念"><a href="#树的概念" class="headerlink" title="树的概念"></a>树的概念</h3><blockquote>
+<p>树 是一种经常用到的数据结构，用来模拟具有树状结构性质的数据集合。</p>
+<p>树里的每一个节点有一个值和一个包含所有子节点的列表。从图的观点来看，树也可视为一个拥有N 个节点和N-1 条边的一个有向无环图。</p>
+<p>二叉树是一种更为典型的树状结构。如它名字所描述的那样，二叉树是每个节点最多有两个子树的树结构，通常子树被称作“左子树”和“右子树”。</p>
+<p>本章节，我们把重点放在介绍二叉树中几种常见的遍历方法。掌握这几种遍历方法，会加深你对树这个数据结构的理解，并为以后的学习打下扎实的基础。</p>
+<p>本章目标：</p>
+<p>理解和区分树的遍历方法<br>能够运用<code>递归方法</code>解决树的为前序遍历、中序遍历和后序遍历问题<br>能用运用<code>迭代方法</code>解决树的为前序遍历、中序遍历和后序遍历问题<br>能用运用<code>广度优先</code>搜索解决树的<code>层序遍历</code>问题</p>
+</blockquote>
+<h2 id="树的遍历"><a href="#树的遍历" class="headerlink" title="树的遍历"></a>树的遍历</h2><h3 id="前序遍历"><a href="#前序遍历" class="headerlink" title="前序遍历"></a>前序遍历</h3><p>前序遍历首先访问根节点，然后遍历左子树，最后遍历右子树。</p>
+<h3 id="中序遍历"><a href="#中序遍历" class="headerlink" title="中序遍历"></a>中序遍历</h3><p>中序遍历是先遍历左子树，然后访问根节点，然后遍历右子树。</p>
+<blockquote>
+<p>通常来说，对于二叉搜索树，我们可以通过中序遍历得到一个递增的有序序列。</p>
+</blockquote>
+<h3 id="后序遍历"><a href="#后序遍历" class="headerlink" title="后序遍历"></a>后序遍历</h3><p>后序遍历是先遍历左子树，然后遍历右子树，最后访问树的根节点。</p>
+<blockquote>
+<p>值得注意的是，当你删除树中的节点时，删除过程将按照后序遍历的顺序进行。 也就是说，当你删除一个节点时，你将首先删除它的左节点和它的右边的节点，然后再删除节点本身。</p>
+</blockquote>
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110180036017.png" alt="img"></p>
+<p>三种遍历在这个树下的结果是这样的:</p>
+<ol>
+<li>前序遍历: +*4-725</li>
+<li>中序遍历: 4*(7-2)+5</li>
+<li>后序遍历: 472-*5+</li>
+</ol>
+<blockquote>
+<p>您可以使用中序遍历轻松找出原始表达式。 但是程序处理这个表达式时并不容易，因为你必须检查操作的优先级。</p>
+<p>如果你想对这棵树进行后序遍历，使用栈来处理表达式会变得更加容易。 每遇到一个操作符，就可以从栈中弹出栈顶的两个元素，计算并将结果返回到栈中。</p>
+</blockquote>
+<h1 id="数据结构自学记录"><a href="#数据结构自学记录" class="headerlink" title="数据结构自学记录"></a>数据结构自学记录</h1><h2 id="书中提到的新概念"><a href="#书中提到的新概念" class="headerlink" title="书中提到的新概念"></a>书中提到的新概念</h2><h3 id="期待的急迫程度"><a href="#期待的急迫程度" class="headerlink" title="期待的急迫程度"></a>期待的急迫程度</h3><p>用栈表示:</p>
+<table>
+<thead>
+<tr>
+<th>栈</th>
+<th>base</th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th></th>
+<th>top</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>迫切度</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>数据编号</td>
+<td>1</td>
+<td>2</td>
+<td>3</td>
+<td>4</td>
+<td>5</td>
+<td>6</td>
+<td>7</td>
+<td>8</td>
+</tr>
+<tr>
+<td>数据</td>
+<td>[</td>
+<td>(</td>
+<td>[</td>
+<td>(</td>
+<td>)</td>
+<td>]</td>
+<td>)</td>
+<td>]</td>
+</tr>
+</tbody></table>
+<h2 id="个人理解记录"><a href="#个人理解记录" class="headerlink" title="个人理解记录"></a>个人理解记录</h2><h3 id="第一章-amp-绪论-抽象数据类型的作用-1"><a href="#第一章-amp-绪论-抽象数据类型的作用-1" class="headerlink" title="第一章&amp;绪论 抽象数据类型的作用(1)"></a>第一章&amp;绪论 抽象数据类型的作用(1)</h3><ol>
+<li><p>设计<strong>ADT</strong>的目的是为了搭建数据模型</p>
+</li>
+<li><p>数据模型与数据模型往往是嵌套存在的，为单独的数据模型想好操作后能够更好的处理它们之间的关系</p>
+<p>例如线性表本身的抽象模型，而线性表是用来服务真实数据的，所以线性表操作的具体内容往往需要根据真实数据来设计，当数据足够大时，临时的片面思考往往得不到优解</p>
+</li>
+<li><p>在程序正式编写前，设计抽象模型有助于思考和试错。</p>
+</li>
+</ol>
+<h3 id="第一章-线性表的顺序表示与实现"><a href="#第一章-线性表的顺序表示与实现" class="headerlink" title="第一章 线性表的顺序表示与实现"></a>第一章 线性表的顺序表示与实现</h3><ol>
+<li><p>类似于<code>d = l</code> 的等差数列</p>
+</li>
+<li><p>定位公式：<br>$$<br>a_i = {a_1 + (i-1)×l}<br>$$</p>
+</li>
+<li><p>总长公式：<br>$$<br>length = {n^2×l\over d} + (a_1-{d\over2})×n<br>$$</p>
+</li>
+</ol>
+<h3 id="第五章-个人对广义表的理解"><a href="#第五章-个人对广义表的理解" class="headerlink" title="第五章 个人对广义表的理解"></a>第五章 个人对广义表的理解</h3><p>个人理解：</p>
+<p>广义表与线性表的区别在于，线性表存储元素，广义表可以同存取元素或广义表、空表等。</p>
+<p>语法对比：</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//=====线性表的链式表示=====</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">LIST</span>&#123;</span></span><br><span class="line">    ElemType data;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">LIST</span>* <span class="title">next</span>;</span> </span><br><span class="line">&#125;List;</span><br><span class="line"></span><br><span class="line"><span class="comment">//=====广义表的头尾链表存储表示(并不是一个链式的广义表)=====</span></span><br><span class="line"><span class="function"><span class="keyword">typedef</span> <span class="title">enum</span> <span class="params">(ATOM,LIST)</span>ElemTag</span>;<span class="comment">//ATOM == 0:原子;LIST == 1:子表;</span></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">GLNodde</span>&#123;</span></span><br><span class="line">    ElemTag tag;					<span class="comment">//公共部分,用于区分原子结点和表结点</span></span><br><span class="line">    <span class="class"><span class="keyword">union</span>&#123;</span>							<span class="comment">//原子结点和表结点的联合部分</span></span><br><span class="line">        AtomType atom;				<span class="comment">//atom是原子结点的值域</span></span><br><span class="line">        <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">            <span class="class"><span class="keyword">struct</span> <span class="title">GLNode</span>* <span class="title">hp</span>, *<span class="title">tp</span>;</span></span><br><span class="line">        &#125;ptr;						<span class="comment">//ptr是表结点的指针域,ptr.hp和ptr.tp分别指向表头和表尾</span></span><br><span class="line">    &#125;;</span><br><span class="line">&#125;*GList;<span class="comment">//广义表类型</span></span><br></pre></td></tr></table></figure>
+
+<p>从上面的对比可以看出相比于线性表，广义表的定义更加复杂。</p>
+<h3 id="其他笔记"><a href="#其他笔记" class="headerlink" title="其他笔记"></a>其他笔记</h3><h4 id="realloc"><a href="#realloc" class="headerlink" title="realloc()"></a>realloc()</h4><p>头文件：#include &lt;stdlib.h&gt;</p>
+<p>realloc() 函数用来重新分配内存空间，其原型为：<br>  void* realloc (void* ptr, size_t size);</p>
+<p>【参数说明】ptr 为需要重新分配的内存空间指针，size 为新的内存空间的大小。</p>
+<p>realloc() 对 ptr 指向的内存重新分配 size 大小的空间，size 可比原来的大或者小，还可以不变（如果你无聊的话）。当 <a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/html/137.html">malloc()</a>、<a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/html/134.html">calloc()</a> 分配的内存空间不够用时，就可以用 realloc() 来调整已分配的内存。</p>
+<p>如果 ptr 为 NULL，它的效果和 malloc() 相同，即分配 size 字节的内存空间。</p>
+<p>如果 size 的值为 0，那么 ptr 指向的内存空间就会被释放，但是由于没有开辟新的内存空间，所以会返回空指针；类似于调用 <a target="_blank" rel="noopener" href="http://c.biancheng.net/cpp/html/135.html">free()</a>。</p>
+<p>几点注意：</p>
+<ul>
+<li>指针 ptr 必须是在动态内存空间分配成功的指针，形如如下的指针是不可以的：int *i; int a[2]；会导致运行时错误，可以简单的这样记忆：用 malloc()、calloc()、realloc() 分配成功的指针才能被 realloc() 函数接受。</li>
+<li>成功分配内存后 ptr 将被系统回收，一定不可再对 ptr 指针做任何操作，包括 free()；相反的，可以对 realloc() 函数的返回值进行正常操作。</li>
+<li>如果是扩大内存操作会把 ptr 指向的内存中的数据复制到新地址（新地址也可能会和原地址相同，但依旧不能对原指针进行任何操作）；如果是缩小内存操作，原始据会被复制并截取新长度。</li>
+</ul>
+<p>【返回值】分配成功返回新的内存地址，可能与 ptr 相同，也可能不同；失败则返回 NULL。</p>
+<p>注意：如果分配失败，ptr 指向的内存不会被释放，它的内容也不会改变，依然可以正常使用。</p>
+<p><strong>代码示例</strong>:</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">main() &#123;</span><br><span class="line">	</span><br><span class="line"></span><br><span class="line">	<span class="keyword">int</span>* p = (<span class="keyword">int</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>)); *p = <span class="number">4</span>;</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;扩容前p=&#123;%d&#125;\n&quot;</span>, *p);</span><br><span class="line">	(<span class="keyword">int</span>*)<span class="built_in">realloc</span>(p, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;扩容后p =&#123;%d,%d&#125;\n&quot;</span>, *p, *(p + <span class="number">1</span>));</span><br><span class="line">    system(<span class="string">&quot;pause&quot;</span>);</span><br><span class="line"></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/202110180035713.png" alt="image-20210813221003070"></p>
+<p>可见，在空间内原有数据的情况下使用realloc()扩容，新扩充的空间并不会被初始化为0，而是类似malloc申请的内存的新内存形式。</p>
+<h2 id="功能算法设计"><a href="#功能算法设计" class="headerlink" title="功能算法设计"></a>功能算法设计</h2><h4 id="筛选重复项"><a href="#筛选重复项" class="headerlink" title="筛选重复项"></a>筛选重复项</h4><p>现在我有一个学生信息表A,想要找出表A所有重复记录的学生,并作出一些处理</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//查询A表中所有重复的学生,并删除</span></span><br><span class="line"><span class="meta">#<span class="meta-keyword">define</span> MYTYPE struct student</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//删除一个结点,并连接前后结点</span></span><br><span class="line"><span class="function">Status <span class="title">del</span><span class="params">(student* sp)</span> </span>&#123;</span><br><span class="line">	sp-&gt;s_next-&gt;s_prev = sp-&gt;s_prev;</span><br><span class="line">	sp-&gt;s_prev-&gt;s_next = sp-&gt;s_next;</span><br><span class="line">    <span class="built_in">free</span>(sp);</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">search</span><span class="params">(MYTYPE *headA)</span></span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span>*<span class="title">headB</span>=</span>head;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">student</span>*<span class="title">head</span>=</span>headA;</span><br><span class="line">    <span class="keyword">int</span> number=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(headB!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">        <span class="keyword">for</span>(headA!=<span class="literal">NULL</span>)&#123;</span><br><span class="line">            <span class="keyword">if</span>(headA==headB)</span><br><span class="line">                number++;</span><br><span class="line">            <span class="keyword">if</span>(number&gt;<span class="number">1</span>)&#123;</span><br><span class="line">                del(headA);</span><br><span class="line">                number--;</span><br><span class="line">            &#125;</span><br><span class="line">            headA=headA-&gt;next</span><br><span class="line">        &#125;</span><br><span class="line">        headA=head;</span><br><span class="line">        headB=headB-&gt;next;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"></span><br></pre></td></tr></table></figure>
+
+<h4 id="在字符串前方插入字符串"><a href="#在字符串前方插入字符串" class="headerlink" title="在字符串前方插入字符串"></a>在字符串前方插入字符串</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">char</span>* <span class="title">str_insert</span><span class="params">(<span class="keyword">char</span>* ch1, <span class="keyword">char</span>* ch2)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">char</span>* str = (<span class="keyword">char</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">char</span>) * <span class="number">15</span>);</span><br><span class="line">	</span><br><span class="line">	<span class="built_in">strcpy</span>(str, ch1);</span><br><span class="line">	<span class="built_in">strcat</span>(str, ch2);</span><br><span class="line">	<span class="built_in">printf</span>(<span class="string">&quot;%s\n&quot;</span>, str);</span><br><span class="line">	<span class="keyword">return</span> str;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h4 id="日志记录"><a href="#日志记录" class="headerlink" title="日志记录"></a>日志记录</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//记录操作名称、改变的内容,保存记录到文件</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//利用枚举对数据类型标注分类</span></span><br><span class="line"><span class="class"><span class="keyword">enum</span> <span class="title">user_type</span>&#123;</span>u_int=<span class="number">1</span>,u_char,u_float,u_double,u_struct,u_int*,u_char*,u_float*,u_double*,u_struct*&#125;;</span><br><span class="line"><span class="comment">//Record函数参数包括操作名称,操作类型,操作内容</span></span><br><span class="line"><span class="function">Status <span class="title">Record</span><span class="params">(<span class="keyword">char</span>*p,<span class="keyword">char</span>*type,<span class="keyword">void</span>*get)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(type=<span class="literal">NULL</span>)</span><br><span class="line">        <span class="keyword">return</span> INFEASIBLE;</span><br><span class="line">    </span><br><span class="line">    <span class="keyword">char</span> *mytype = str_insert(<span class="string">&quot;u_&quot;</span>,type);<span class="comment">//use_malloc</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">switch</span>(mytype)&#123;</span><br><span class="line">        <span class="comment">//根据枚举类型编写选择,以及对空指针的强制转换</span></span><br><span class="line">    &#125;</span><br><span class="line">    <span class="comment">//保存文件</span></span><br><span class="line">    keep_into_file(p);</span><br><span class="line">    <span class="built_in">free</span>(mytype);<span class="comment">//free_malloc</span></span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>其他须知:</p>
+<ol>
+<li>任何类型的指针都可以直接赋值给 void 指针，而无需进行其他相关的强制类型转换。虽然如此，但这并不意味着可以无需任何强制类型转换就将 void 指针直接赋给其他类型的指针，因为“空类型”可以包容“有类型”，而“有类型”则不能包容“空类型”。</li>
+<li>要将 void 指针赋值给其他类型的指针，必须进行强制类型转换。</li>
+</ol>
+<h4 id="表产生时自动填充随机数据"><a href="#表产生时自动填充随机数据" class="headerlink" title="表产生时自动填充随机数据"></a>表产生时自动填充随机数据</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">InitList</span><span class="params">(data* C)</span></span>&#123;</span><br><span class="line">	C = (data*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(data));</span><br><span class="line">	C-&gt;elem = <span class="number">-1</span>;<span class="comment">//建立头结点</span></span><br><span class="line">    </span><br><span class="line">    data*p=(data*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(data));</span><br><span class="line">    p-&gt;next = <span class="literal">NULL</span>;<span class="comment">//建立第1号结点</span></span><br><span class="line">    </span><br><span class="line">    C-&gt;next = p;<span class="comment">//链接头结点与第一号结点</span></span><br><span class="line">        </span><br><span class="line">	<span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">1</span>; i &lt; <span class="number">6</span>; i++)&#123;</span><br><span class="line">		p-&gt;elem = random(<span class="number">1</span>, <span class="number">100</span>);<span class="comment">//给p指向的结点填入随机数</span></span><br><span class="line">		p-&gt;next = (data*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(data));<span class="comment">//命令尾结点建立新结点</span></span><br><span class="line">        p = p-&gt;next;<span class="comment">//移动指针p到新结点</span></span><br><span class="line">        p-&gt;next = C;<span class="comment">//让尾结点指向头结点</span></span><br><span class="line">        </span><br><span class="line">	&#125;<span class="comment">//该循环建立5个新结点</span></span><br><span class="line">    </span><br><span class="line">    p-&gt;elem = random(<span class="number">1</span>, <span class="number">100</span>);<span class="comment">//给尾结点填入随机数</span></span><br><span class="line">	C = p;<span class="comment">//让记录链表位置的指针指向这个循环链表的尾部</span></span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h4 id="对一元多项式两式求和"><a href="#对一元多项式两式求和" class="headerlink" title="对一元多项式两式求和"></a>对一元多项式两式求和</h4><figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br><span class="line">44</span><br><span class="line">45</span><br><span class="line">46</span><br><span class="line">47</span><br><span class="line">48</span><br><span class="line">49</span><br><span class="line">50</span><br><span class="line">51</span><br><span class="line">52</span><br><span class="line">53</span><br><span class="line">54</span><br><span class="line">55</span><br><span class="line">56</span><br><span class="line">57</span><br><span class="line">58</span><br><span class="line">59</span><br><span class="line">60</span><br><span class="line">61</span><br><span class="line">62</span><br><span class="line">63</span><br><span class="line">64</span><br><span class="line">65</span><br><span class="line">66</span><br><span class="line">67</span><br><span class="line">68</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> <span class="title">datas</span>&#123;</span></span><br><span class="line">    <span class="keyword">short</span> no;<span class="comment">//项的个数与头尾区分</span></span><br><span class="line">    <span class="keyword">float</span> factor;</span><br><span class="line">    <span class="keyword">int</span> e;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span>* <span class="title">next</span>;</span></span><br><span class="line">&#125;<span class="built_in">list</span>;<span class="comment">//一个项的数据抽象</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">list</span>*<span class="title">mymalloc</span><span class="params">(<span class="built_in">list</span>*p)</span></span>&#123;</span><br><span class="line">    <span class="comment">//开辟一个空间并初始化,p记录该空间</span></span><br><span class="line">    p = (<span class="built_in">list</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="built_in">list</span>));</span><br><span class="line">    p-&gt;no = <span class="number">0</span>;</span><br><span class="line">    p-&gt;factor = <span class="number">0</span>;</span><br><span class="line">    p-&gt;e = <span class="number">0</span>;</span><br><span class="line">    p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">if</span>(p=<span class="literal">NULL</span>)<span class="keyword">return</span> ERROR;</span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;<span class="comment">//mymalloc</span></span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">clear</span><span class="params">(<span class="built_in">list</span>*p)</span></span>&#123;</span><br><span class="line">    <span class="comment">//重置一个项</span></span><br><span class="line">    p-&gt;no = <span class="number">0</span>;</span><br><span class="line">    p-&gt;factor = <span class="number">0</span>;</span><br><span class="line">    p-&gt;e = <span class="number">0</span>;</span><br><span class="line">    p-&gt;next = <span class="literal">NULL</span>;</span><br><span class="line">&#125;<span class="comment">//clear</span></span><br><span class="line"></span><br><span class="line"><span class="function">Status <span class="title">plus</span><span class="params">(<span class="built_in">list</span>*c,<span class="built_in">list</span>*p,<span class="keyword">int</span> count)</span></span>&#123;</span><br><span class="line">    <span class="keyword">if</span>(c-&gt;e!=p-&gt;e)&#123;</span><br><span class="line">        mymalloc(c-&gt;next);<span class="comment">//开辟一个新项</span></span><br><span class="line">        count++;<span class="comment">//记录总和式项数+1</span></span><br><span class="line">        c = c-&gt;next;<span class="comment">//移动指针</span></span><br><span class="line">    &#125;</span><br><span class="line">    c-&gt;e = p-&gt;e;<span class="comment">//记录e值</span></span><br><span class="line">    c-&gt;flactor += p-&gt;flactor;<span class="comment">//求和两个线性式的该项系数和</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">if</span>(c-&gt;flactor==<span class="number">0</span>)&#123;</span><br><span class="line">        count--;</span><br><span class="line">        clear(c);</span><br><span class="line">    &#125;<span class="comment">//如果系数为0则该项不计</span></span><br><span class="line">    p = p-&gt;next;<span class="comment">//指针右移</span></span><br><span class="line">    </span><br><span class="line">    <span class="keyword">return</span> OK;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="built_in">list</span>* <span class="title">sum</span><span class="params">(<span class="built_in">list</span>* la,<span class="built_in">list</span>* lb)</span></span>&#123;</span><br><span class="line">    <span class="comment">//对一元线性式la与lb求和</span></span><br><span class="line">    <span class="built_in">list</span>*c=(<span class="built_in">list</span>*)<span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="built_in">list</span>));<span class="comment">//建立总和链表</span></span><br><span class="line">    <span class="built_in">list</span>* head = c;<span class="comment">//记录c表的位置</span></span><br><span class="line">    c-&gt;no=<span class="number">-1</span>;</span><br><span class="line">    <span class="built_in">list</span>*pa=la-&gt;next;<span class="comment">//建立游标a</span></span><br><span class="line">    <span class="built_in">list</span>*pb=lb-&gt;next;<span class="comment">//建立游标b</span></span><br><span class="line">    <span class="keyword">int</span> count=<span class="number">0</span>;<span class="comment">//项数计数</span></span><br><span class="line">    <span class="keyword">if</span>(!pa||!pb)<span class="keyword">return</span> ERROR;<span class="comment">//某表不存在</span></span><br><span class="line">    <span class="keyword">while</span>(pa||pb)&#123;</span><br><span class="line">        <span class="keyword">if</span>(pa-&gt;e &lt;= pb-&gt;e)</span><br><span class="line">            plus(c,pa,count);</span><br><span class="line">        <span class="keyword">else</span></span><br><span class="line">            plus(c,pb,count);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">if</span>(pa)</span><br><span class="line">        <span class="keyword">while</span>(pa)</span><br><span class="line">            plus(c,pa,count);</span><br><span class="line">    <span class="keyword">if</span>(pb)</span><br><span class="line">        <span class="keyword">while</span>(pb)</span><br><span class="line">            plus(c,pb,count);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> head;<span class="comment">//将总和线性表c返回调用函数</span></span><br><span class="line">&#125;<span class="comment">//sum</span></span><br></pre></td></tr></table></figure>
+
+<p>忽略clear与mymalloc时间不计,plus时间与传入它的p时间成正比,所以时间复杂度为:<br>$$<br>O(n)=O({length(la)+length(lb)})<br>$$</p>
+<h2 id="LeetCode错题集"><a href="#LeetCode错题集" class="headerlink" title="LeetCode错题集"></a>LeetCode错题集</h2><h3 id="数组-1"><a href="#数组-1" class="headerlink" title="数组"></a>数组</h3><h4 id="第一题"><a href="#第一题" class="headerlink" title="第一题"></a>第一题</h4><blockquote>
+<p>给定一个整数数组，判断是否存在重复元素。</p>
+<p>如果存在一值在数组中出现至少两次，函数返回 <code>true</code> 。如果数组中每个元素都不相同，则返回 <code>false</code> </p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//双循环</span></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> j=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">for</span>(;i&lt;numsSize;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(j=<span class="number">0</span>;j&lt;numsSize<span class="number">-1</span>-i;j++)&#123;</span><br><span class="line">            <span class="keyword">if</span>(*(nums+i) == *(nums+<span class="number">1</span>+i+j))  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;<span class="comment">//containsDuplicate</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//先排序再查重</span></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span>* _a, <span class="keyword">const</span> <span class="keyword">void</span>* _b)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> a = *(<span class="keyword">int</span>*)_a, b = *(<span class="keyword">int</span>*)_b;</span><br><span class="line">    <span class="keyword">return</span> a - b;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</span><br><span class="line">    qsort(nums, numsSize, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), cmp);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize - <span class="number">1</span>; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (nums[i] == nums[i + <span class="number">1</span>]) &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;<span class="comment">//containsDuplicate</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">//哈希表</span></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span> &#123;</span></span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    UT_hash_handle hh;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">containsDuplicate</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">set</span> =</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">tmp</span>;</span></span><br><span class="line">        HASH_FIND_INT(<span class="built_in">set</span>, nums + i, tmp);</span><br><span class="line">        <span class="keyword">if</span> (tmp == <span class="literal">NULL</span>) &#123;</span><br><span class="line">            tmp = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct hashTable));</span><br><span class="line">            tmp-&gt;key = nums[i];</span><br><span class="line">            HASH_ADD_INT(<span class="built_in">set</span>, key, tmp);</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">&#125;<span class="comment">//containsDuplicate</span></span><br></pre></td></tr></table></figure>
+
+<p> </p>
+<blockquote>
+<p>qsort()是glib中的排序函数，本文分析其基本流程。qsort()的判断流程如下：</p>
+<p>优先使用归并排序来排序输入数据。归并排序的空间复杂度为O(n)，当数据量不算大的时候，可以负担的其额外的O(n)空间来实现更快的排序速度<br>当数据量较大的时候，改用快速排序算法实现<br>快速排序的分区点选取采用三数取中法：从区间的首、尾、中间，分别取出一个数，然后对比大小，取这 3 个数的中间值作为分区点。<br>当排序区间元素值小于等于4时，退化为插入排序而非继续递归做快速排序。插入排序在n较小的时候，O(n^2)的表现甚至好于O(nlogn)，因为实际上快速排序的复杂度计算为knlogn + c，比起插入排序会性能更差。</p>
+<p>————————————————<br>版权声明：本文为CSDN博主「Ch_ty」的原创文章，遵循CC 4.0 BY-SA版权协议，转载请附上原文出处链接及本声明。<br>原文链接：<a target="_blank" rel="noopener" href="https://blog.csdn.net/u013354486/article/details/105312744">https://blog.csdn.net/u013354486/article/details/105312744</a></p>
+</blockquote>
+<h4 id="第二题"><a href="#第二题" class="headerlink" title="第二题"></a>第二题</h4><blockquote>
+<p>给定一个整数数组 <code>nums</code> ，找到一个具有最大和的连续子数组（子数组最少包含一个元素），返回其最大和。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//贪心算法(指针的间接访问)</span></span><br><span class="line">	<span class="keyword">int</span>* p = &amp;nums[<span class="number">0</span>];					<span class="comment">//初始化指针</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;							<span class="comment">//计数器</span></span><br><span class="line">	<span class="keyword">int</span> max = nums[<span class="number">0</span>];					<span class="comment">//初始化最大值</span></span><br><span class="line">	<span class="keyword">int</span> now = <span class="number">0</span>;						<span class="comment">//初始化当前值</span></span><br><span class="line">	<span class="keyword">for</span> (; i &lt; numsSize; p++) &#123;</span><br><span class="line">        i++;								<span class="comment">//计数</span></span><br><span class="line">        now += *p;							<span class="comment">//在当前基础上增加值</span></span><br><span class="line">		<span class="keyword">if</span> (now &gt; max) max = now;			<span class="comment">//取最大</span></span><br><span class="line">		<span class="keyword">if</span> (now &lt; <span class="number">0</span>)   now = <span class="number">0</span>;				<span class="comment">//当前值小于0时舍弃之前的值,移动到下一位</span></span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时:6ms;内存消耗:6.1MB</span></span><br></pre></td></tr></table></figure>
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">maxSubArray</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize)</span> </span>&#123;</span><br><span class="line">	<span class="comment">//贪心算法(下标法)</span></span><br><span class="line">	<span class="keyword">int</span> i = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">int</span> max = nums[<span class="number">0</span>];</span><br><span class="line">	<span class="keyword">int</span> now = <span class="number">0</span>;</span><br><span class="line">	<span class="keyword">for</span> (; i &lt; numsSize;) &#123;</span><br><span class="line">        now += nums[i];</span><br><span class="line">        i++;</span><br><span class="line">		<span class="keyword">if</span> (now &gt; max) max = now;</span><br><span class="line">		<span class="keyword">if</span> (now &lt; <span class="number">0</span>)   now = <span class="number">0</span>;</span><br><span class="line">	&#125;</span><br><span class="line">	<span class="keyword">return</span> max;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时:8ms;内存消耗:6.2MB</span></span><br></pre></td></tr></table></figure>
+
+<p>上述对比表明下标法的访问速度比指针慢,且内存消耗大。</p>
+<h4 id="第三题"><a href="#第三题" class="headerlink" title="第三题"></a>第三题</h4><blockquote>
+<p>给定一个整数数组 nums 和一个整数目标值 target，请你在该数组中找出 和为目标值 target  的那 两个 整数，并返回它们的数组下标。</p>
+<p>你可以假设每种输入只会对应一个答案。但是，数组中同一个元素在答案里不能重复出现。</p>
+<p>你可以按任意顺序返回答案。</p>
+</blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="comment">/**</span></span><br><span class="line"><span class="comment"> * Note: The returned array must be malloced, assume caller calls free().</span></span><br><span class="line"><span class="comment"> */</span></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target, <span class="keyword">int</span>* returnSize)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span>* p=nums;<span class="keyword">int</span>* q = &amp;nums[numsSize<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;<span class="keyword">int</span> j = numsSize<span class="number">-1</span>;</span><br><span class="line">    <span class="keyword">int</span>* ret = <span class="literal">NULL</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span>(;i &lt; numsSize;p++,i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(q = &amp;nums[numsSize<span class="number">-1</span>],j = numsSize<span class="number">-1</span>;q &gt; p;q--,j--)&#123;</span><br><span class="line">            <span class="keyword">if</span>(*q == target - *p)&#123;</span><br><span class="line">                <span class="keyword">int</span>* ret = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * <span class="number">2</span>);<span class="comment">//malloc</span></span><br><span class="line">                ret[<span class="number">0</span>] = i, ret[<span class="number">1</span>] = j;</span><br><span class="line">                *returnSize = <span class="number">2</span>;</span><br><span class="line">                <span class="keyword">return</span> ret;</span><br><span class="line">            &#125;<span class="comment">//if</span></span><br><span class="line">        &#125;<span class="comment">//for</span></span><br><span class="line">        q++;	<span class="comment">//将后位退一格</span></span><br><span class="line">    &#125;<span class="comment">//for</span></span><br><span class="line">    <span class="keyword">return</span> ;</span><br><span class="line">&#125;<span class="comment">//twoSum</span></span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时:124ms;内存消耗:6.1MB</span></span><br></pre></td></tr></table></figure>
+
+
+
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br><span class="line">43</span><br></pre></td><td class="code"><pre><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span> &#123;</span></span><br><span class="line">    <span class="comment">//哈希表查找</span></span><br><span class="line">    <span class="keyword">int</span> key;</span><br><span class="line">    <span class="keyword">int</span> val;</span><br><span class="line">    UT_hash_handle hh;</span><br><span class="line">&#125;;</span><br><span class="line"></span><br><span class="line"><span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">hashtable</span>;</span></span><br><span class="line"></span><br><span class="line"><span class="function">struct hashTable* <span class="title">find</span><span class="params">(<span class="keyword">int</span> ikey)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">tmp</span>;</span></span><br><span class="line">    HASH_FIND_INT(hashtable, &amp;ikey, tmp);</span><br><span class="line">    <span class="keyword">return</span> tmp;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">insert</span><span class="params">(<span class="keyword">int</span> ikey, <span class="keyword">int</span> ival)</span> </span>&#123;</span><br><span class="line">    <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">it</span> =</span> find(ikey);</span><br><span class="line">    <span class="keyword">if</span> (it == <span class="literal">NULL</span>) &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">tmp</span> =</span> <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(struct hashTable));</span><br><span class="line">        tmp-&gt;key = ikey, tmp-&gt;val = ival;</span><br><span class="line">        HASH_ADD_INT(hashtable, key, tmp);</span><br><span class="line">    &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">        it-&gt;val = ival;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">twoSum</span><span class="params">(<span class="keyword">int</span>* nums, <span class="keyword">int</span> numsSize, <span class="keyword">int</span> target, <span class="keyword">int</span>* returnSize)</span> </span>&#123;</span><br><span class="line">    hashtable = <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; numsSize; i++) &#123;</span><br><span class="line">        <span class="class"><span class="keyword">struct</span> <span class="title">hashTable</span>* <span class="title">it</span> =</span> find(target - nums[i]);</span><br><span class="line">        <span class="keyword">if</span> (it != <span class="literal">NULL</span>) &#123;</span><br><span class="line">            <span class="keyword">int</span>* ret = <span class="built_in">malloc</span>(<span class="keyword">sizeof</span>(<span class="keyword">int</span>) * <span class="number">2</span>);</span><br><span class="line">            ret[<span class="number">0</span>] = it-&gt;val, ret[<span class="number">1</span>] = i;</span><br><span class="line">            *returnSize = <span class="number">2</span>;</span><br><span class="line">            <span class="keyword">return</span> ret;</span><br><span class="line">        &#125;</span><br><span class="line">        insert(nums[i], i);</span><br><span class="line">    &#125;</span><br><span class="line">    *returnSize = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时:4ms;内存消耗:7.8MB</span></span><br></pre></td></tr></table></figure>
+
+<h4 id="第四题"><a href="#第四题" class="headerlink" title="第四题"></a>第四题</h4><blockquote>
+<p>给你两个有序整数数组 nums1 和 nums2，请你将 nums2 合并到 nums1 中，使 nums1 成为一个有序数组。</p>
+<p>初始化 nums1 和 nums2 的元素数量分别为 m 和 n 。你可以假设 nums1 的空间大小等于 m + n，这样它就有足够的空间保存来自 nums2 的元素。</p>
+</blockquote>
+<p>方法一: 直接合并后排序</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmp</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span> *a,<span class="keyword">const</span> <span class="keyword">void</span> *b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> *(<span class="keyword">int</span> *)a-*(<span class="keyword">int</span> *)b;<span class="comment">//这是从小到大排序，若是从大到小改成： return *(int *)b-*(int *)a;</span></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span> m, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> i=<span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span>* p1 = &amp;nums1[nums1Size<span class="number">-1</span>];</span><br><span class="line">    <span class="keyword">int</span>* p2 = nums2;</span><br><span class="line">    <span class="keyword">for</span>(;i&lt;n;p1--,p2++)&#123;</span><br><span class="line">        i++;</span><br><span class="line">        *p1 = *p2;</span><br><span class="line">    &#125;<span class="comment">//for</span></span><br><span class="line">    qsort(nums1,nums1Size,<span class="keyword">sizeof</span>(nums1[<span class="number">0</span>]),cmp);</span><br><span class="line"></span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时: 4ms;内存消耗: 5.9MB</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：O((m+n)\log(m+n))O((m+n)log(m+n))。<br>排序序列长度为 m+nm+n，套用快速排序的时间复杂度即可，平均情况为 O((m+n)\log(m+n))O((m+n)log(m+n))。</p>
+</li>
+<li><p>空间复杂度：O(\log(m+n))O(log(m+n))。<br>排序序列长度为 m+nm+n，套用快速排序的空间复杂度即可，平均情况为 O(\log(m+n))O(log(m+n))。</p>
+</li>
+</ul>
+<p>方法二: 双指针</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span> m, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//双指针法</span></span><br><span class="line">    <span class="keyword">int</span> p1 = <span class="number">0</span>, p2 = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> sorted[m + n];</span><br><span class="line">    <span class="keyword">int</span> cur;</span><br><span class="line">    <span class="keyword">while</span> (p1 &lt; m || p2 &lt; n) &#123;</span><br><span class="line">        <span class="keyword">if</span> (p1 == m) &#123;</span><br><span class="line">            cur = nums2[p2++];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (p2 == n) &#123;</span><br><span class="line">            cur = nums1[p1++];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums1[p1] &lt; nums2[p2]) &#123;</span><br><span class="line">            cur = nums1[p1++];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cur = nums2[p2++];</span><br><span class="line">        &#125;</span><br><span class="line">        sorted[p1 + p2 - <span class="number">1</span>] = cur;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i != m + n; ++i) &#123;</span><br><span class="line">        nums1[i] = sorted[i];</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时: 4ms;内存消耗: 5.9MB</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：O(m+n)O(m+n)。<br>指针移动单调递增，最多移动 m+nm+n 次，因此时间复杂度为 O(m+n)O(m+n)。</p>
+</li>
+<li><p>空间复杂度：O(m+n)O(m+n)。<br>需要建立长度为 m+nm+n 的中间数组 \textit{sorted}sorted。</p>
+</li>
+</ul>
+<p>方法三: 逆向双指针</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">void</span> <span class="title">merge</span><span class="params">(<span class="keyword">int</span>* nums1, <span class="keyword">int</span> nums1Size, <span class="keyword">int</span> m, <span class="keyword">int</span>* nums2, <span class="keyword">int</span> nums2Size, <span class="keyword">int</span> n)</span> </span>&#123;</span><br><span class="line">    <span class="comment">//逆向双指针</span></span><br><span class="line">    <span class="keyword">int</span> p1 = m - <span class="number">1</span>, p2 = n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> tail = m + n - <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> cur;</span><br><span class="line">    <span class="keyword">while</span> (p1 &gt;= <span class="number">0</span> || p2 &gt;= <span class="number">0</span>) &#123;</span><br><span class="line">        <span class="keyword">if</span> (p1 == <span class="number">-1</span>) &#123;</span><br><span class="line">            cur = nums2[p2--];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (p2 == <span class="number">-1</span>) &#123;</span><br><span class="line">            cur = nums1[p1--];</span><br><span class="line">        &#125; <span class="keyword">else</span> <span class="keyword">if</span> (nums1[p1] &gt; nums2[p2]) &#123;</span><br><span class="line">            cur = nums1[p1--];</span><br><span class="line">        &#125; <span class="keyword">else</span> &#123;</span><br><span class="line">            cur = nums2[p2--];</span><br><span class="line">        &#125;</span><br><span class="line">        nums1[tail--] = cur;</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="comment">//耗时: 4ms;内存消耗: 6.2MB</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>复杂度分析</strong></p>
+<ul>
+<li><p>时间复杂度：O(m+n)O(m+n)。<br>指针移动单调递减，最多移动 m+nm+n 次，因此时间复杂度为 O(m+n)O(m+n)。</p>
+</li>
+<li><p>空间复杂度：O(1)O(1)。<br>直接对数组 <code>nums1</code>原地修改，不需要额外空间。</p>
+</li>
+</ul>
+<h1 id="数据结构网课"><a href="#数据结构网课" class="headerlink" title="数据结构网课"></a>数据结构网课</h1><h2 id="数据结构——绪论"><a href="#数据结构——绪论" class="headerlink" title="数据结构——绪论"></a>数据结构——绪论</h2><h3 id="逻辑结构"><a href="#逻辑结构" class="headerlink" title="逻辑结构"></a>逻辑结构</h3><blockquote>
+<ul>
+<li>描述数据元素之间的逻辑关系</li>
+<li>与数据的存储无关</li>
+<li>从具体问题抽象出来的数学模型</li>
+</ul>
+</blockquote>
+<h4 id="线性结构与非线性结构"><a href="#线性结构与非线性结构" class="headerlink" title="线性结构与非线性结构"></a>线性结构与非线性结构</h4><ol>
+<li><p>线性结构</p>
+<blockquote>
+<p>有且仅有一个开始和一个终端结点,并且所有结点都最多只有一个个直接前驱和直接后继</p>
+<blockquote>
+<p>线性表、栈、队列、串</p>
+</blockquote>
+</blockquote>
+</li>
+<li><p>非线性结构</p>
+<blockquote>
+<p>一个结点可能有多个直接前驱和直接后继</p>
+<blockquote>
+<p>树、图</p>
+</blockquote>
+</blockquote>
+<h4 id="四种基本逻辑结构"><a href="#四种基本逻辑结构" class="headerlink" title="四种基本逻辑结构"></a>四种基本逻辑结构</h4><ol>
+<li><p>集合</p>
+<blockquote>
+<p>结构中的元素除了同属于一个集合的关系外无其他关系</p>
+</blockquote>
+</li>
+<li><p>线性</p>
+<blockquote>
+<p>结构中的数据元素存在一对一的线性关系</p>
+</blockquote>
+</li>
+<li><p>树</p>
+<blockquote>
+<p>结构中的数据元素之间存在一对多的层次关系</p>
+</blockquote>
+</li>
+<li><p>图</p>
+<blockquote>
+<p>结构中的元素间存在多对多的任意关系</p>
+</blockquote>
+</li>
+</ol>
+</li>
+</ol>
+<h3 id="物理结构-数据的存储结构"><a href="#物理结构-数据的存储结构" class="headerlink" title="物理结构(数据的存储结构)"></a>物理结构(数据的存储结构)</h3><blockquote>
+<ul>
+<li><p>数据元素及其关系在计算机存储器中的结构(存储方式)</p>
+</li>
+<li><p>是数据结构在计算机中的表示</p>
+</li>
+</ul>
+</blockquote>
+<h4 id="四种基本的存储结构"><a href="#四种基本的存储结构" class="headerlink" title="四种基本的存储结构"></a>四种基本的存储结构</h4><ol>
+<li>顺序存储结构<ul>
+<li>用一组连续的存储单元依次存储数据元素,数据元素之间的逻辑关系有元素的存储位置来表示</li>
+<li>C语言数组</li>
+</ul>
+</li>
+<li>链接存储结构<ul>
+<li>用一组任意的存储单元存储数据元素,数据元素之间的逻辑关系用指针表示</li>
+<li>C语言链表</li>
+</ul>
+</li>
+<li>索引存储结构<ul>
+<li>在存储结点信息的同时,还建立附加的索引表</li>
+<li>索引表中的每一项称为一个索引项</li>
+<li>索引项的一般形式是:(关键字,地址)</li>
+<li>关键字是唯一标识一个结点的那些数据项</li>
+<li>若每个结点在索引表中都有一个索引项,则该索引表称为稠密索引(Dense Index);若一组结点在索引表中只对应一个索引项,则该索引表称为稀疏索引表(Sparse Index)</li>
+</ul>
+</li>
+<li>散列存储结构<ul>
+<li>根据结点的关键字直接计算出该结点的存储地址</li>
+</ul>
+</li>
+</ol>
+<h3 id="逻辑结构与存储结构的关系"><a href="#逻辑结构与存储结构的关系" class="headerlink" title="逻辑结构与存储结构的关系"></a>逻辑结构与存储结构的关系</h3><blockquote>
+<ul>
+<li>存储结构是逻辑关系的映像与元素本身的映像</li>
+<li>逻辑结构是数据结构的抽象,存储结构是数据结构的实现</li>
+</ul>
+</blockquote>
+<h3 id="运算和实现"><a href="#运算和实现" class="headerlink" title="运算和实现"></a>运算和实现</h3><h3 id="数据类型和抽象数据类型"><a href="#数据类型和抽象数据类型" class="headerlink" title="数据类型和抽象数据类型"></a>数据类型和抽象数据类型</h3><ul>
+<li>在使用高级程序设计语言编写程序时,必须对程序中出现的每个变量、常量或表达式，明确说明他们所属的数据类型</li>
+<li>一些最基本数据结构可以用数据类型实现，如数组、字符串</li>
+<li>另一些常用数据结构，如栈、队列、树、图等，不能直接用数据类型表示</li>
+</ul>
+<h4 id="数据类型的作用："><a href="#数据类型的作用：" class="headerlink" title="数据类型的作用："></a>数据类型的作用：</h4><ul>
+<li>高级语言的数据裂隙明显或隐含地<strong>规定了在程序执行期间变量和表达式所有可能的取值范围</strong>，以及在这些范围上<strong>允许的操作</strong></li>
+</ul>
+<h4 id="思维方法：抽象数据类型"><a href="#思维方法：抽象数据类型" class="headerlink" title="思维方法：抽象数据类型"></a>思维方法：抽象数据类型</h4><p>举例：抽象一组圆</p>
+<blockquote>
+<p>圆</p>
+<blockquote>
+<p>本质:</p>
+<blockquote>
+<p>到某个点到距离相等点的集合</p>
+</blockquote>
+<p>基本属性:</p>
+<blockquote>
+<p>半径（r）</p>
+</blockquote>
+<p>基本操作：</p>
+<blockquote>
+<p>构造圆、求面积、求周长</p>
+</blockquote>
+<p>其他扩展属性：</p>
+<blockquote>
+<p>颜色、实心空心等</p>
+</blockquote>
+<p>其他扩展操作：</p>
+<blockquote>
+<p>构造空心圆、改变圆的颜色等</p>
+</blockquote>
+</blockquote>
+</blockquote>
+<h5 id="抽象数据类型（Abstract-Data-Type-ADT-的定义"><a href="#抽象数据类型（Abstract-Data-Type-ADT-的定义" class="headerlink" title="抽象数据类型（Abstract Data Type,ADT)的定义"></a>抽象数据类型（Abstract Data Type,ADT)的定义</h5><ul>
+<li>ADT是指一个数学模型以及定义在此数学模型上的一组操作<ul>
+<li>由用户定义，从问题抽象出数据模型（逻辑结构）</li>
+<li>还包括定义在数据模型上的一组抽象运算（相关操作）</li>
+<li>不考虑计算机内具体的存储结构与运算的具体实现算法</li>
+</ul>
+</li>
+</ul>
+<h4 id="抽象类型的形式定义——（D-S-P）三元组"><a href="#抽象类型的形式定义——（D-S-P）三元组" class="headerlink" title="抽象类型的形式定义——（D,S,P）三元组"></a>抽象类型的形式定义——（D,S,P）三元组</h4><figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br></pre></td><td class="code"><pre><span class="line">ADT 抽象数据类型名&#123;</span><br><span class="line">	D数据对象:&lt;对象定义&gt;</span><br><span class="line">	S是D上的关系集:&lt;关系定义&gt;</span><br><span class="line">	P是对D的基本操作:&lt;基本操作定义&gt;</span><br><span class="line">&#125;ADT 抽象数据类型名</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>基本操作定义格式说明:</p>
+<blockquote>
+<p><strong>参数表：</strong>赋值参数只为操作提供输入值</p>
+<p>​                引用参数以&amp;打头，除可提供输入值外，还将返回操作结果</p>
+<p><strong>初始条件：</strong>描述操作执行之前数据结构和参数应满足的条件，若不满足则操作失败，并返回出错信息。</p>
+<p><strong>操作结果：</strong></p>
+</blockquote>
+</blockquote>
+<p>举例：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line">ADT Circle&#123;</span><br><span class="line">	数据对象：D = &#123;r,x,y|r,x,y均为实数&#125;</span><br><span class="line">	数据关系：R = &#123;&lt;r,x,y&gt;|r是半径，&lt;x,y&gt;是圆心坐标&#125;</span><br><span class="line">	基本操作：</span><br><span class="line">	Circle(&amp;C,r,x,y);</span><br><span class="line">		操作结果：构造一个圆。</span><br><span class="line">	oduble Area(C)</span><br><span class="line">		初始条件：圆已存在。</span><br><span class="line">		操作结果：计算面积。</span><br><span class="line">	double Circumference(C)</span><br><span class="line">		初始条件：圆已存在。</span><br><span class="line">		操作结果：计算周长</span><br><span class="line">&#125;ADT Circle</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="算法和算法分析-1"><a href="#算法和算法分析-1" class="headerlink" title="算法和算法分析"></a>算法和算法分析</h3><blockquote>
+<p>定义</p>
+<blockquote>
+<p>对特定问题求解方法和步骤的一种描述，它是指令的有限序列。其中每个指令表示一个或多个操作</p>
+</blockquote>
+<p>白话</p>
+<blockquote>
+<p>解决问题的方法和具体步骤</p>
+</blockquote>
+</blockquote>
+<h4 id="算法的描述"><a href="#算法的描述" class="headerlink" title="算法的描述"></a>算法的描述</h4><p>一般可以用以下几种方式描述：</p>
+<ul>
+<li>自然语言</li>
+<li>传统流程图</li>
+<li>NS流程图</li>
+<li>伪代码：类语言（该网课内用类C语言）</li>
+<li>高级程序设计语言：C++、Java、JavaScript</li>
+</ul>
+<h4 id="算法特性"><a href="#算法特性" class="headerlink" title="算法特性"></a>算法特性</h4><ul>
+<li><p>有穷性</p>
+<blockquote>
+<p>一个算法必须总是在执行有穷步后结束，且每一步都在有穷时间内完成</p>
+</blockquote>
+</li>
+<li><p>确定性</p>
+<blockquote>
+<p>算法中的每一条指令必须有确切含义，没有二义性，在任何条件下只有唯一一条执行路径，即对应相同的输入只能得到相同的输出</p>
+</blockquote>
+</li>
+<li><p>可行性</p>
+<blockquote>
+<p>算法是可执行的，算法描述的操作可以通过已经实现的基本操作执行有限次来实现</p>
+</blockquote>
+</li>
+<li><p>输入：0或多</p>
+</li>
+<li><p>输出：1或多</p>
+</li>
+</ul>
+<h4 id="算法设计的要求"><a href="#算法设计的要求" class="headerlink" title="算法设计的要求"></a>算法设计的要求</h4><ul>
+<li>正确性</li>
+<li>可读性</li>
+<li>健壮性</li>
+<li>高效性</li>
+</ul>
+<h4 id="算法分析"><a href="#算法分析" class="headerlink" title="算法分析"></a>算法分析</h4><p>在满足算法设计要求的前提下考虑：<strong>时间效率</strong>、<strong>算法空间效率</strong>。</p>
+<h5 id="算法时间效率"><a href="#算法时间效率" class="headerlink" title="算法时间效率"></a>算法时间效率</h5><ul>
+<li><p>事后统计</p>
+<p>缺点，真实时间受设备等外因影响。</p>
+</li>
+<li><p>事前分析</p>
+<p>T = ∑语句频度×单位时间</p>
+</li>
+</ul>
+<p>我们在比较时不严格按照该方程，而比较算法的数量级，也称为算法的<strong>渐进时间复杂度O(f(n))</strong>,也称<strong>时间复杂度</strong></p>
+<h5 id="分析算法时间复杂度的基本方法"><a href="#分析算法时间复杂度的基本方法" class="headerlink" title="分析算法时间复杂度的基本方法"></a>分析算法时间复杂度的基本方法</h5><ol>
+<li>找出语句频度最大的那条语句作为基本语句</li>
+<li>计算基本语句的频度得到问题规模n的某个函数f(n)</li>
+<li>取其数量级用“O”表示</li>
+</ol>
+<h5 id="算法空间效率"><a href="#算法空间效率" class="headerlink" title="算法空间效率"></a>算法空间效率</h5><h2 id="线性表"><a href="#线性表" class="headerlink" title="线性表"></a>线性表</h2><ul>
+<li>具有n个相同元素的有限序列</li>
+<li>可以通过索引进行随机访问</li>
+<li>常见的线性表有<ul>
+<li>数组(array)</li>
+<li>链表</li>
+<li>栈</li>
+<li>队列</li>
+<li>哈希表(散列表)</li>
+</ul>
+</li>
+</ul>
+<h3 id="接口设计"><a href="#接口设计" class="headerlink" title="接口设计"></a>接口设计</h3><h4 id="数组-array"><a href="#数组-array" class="headerlink" title="数组(array)"></a>数组(array)</h4><p>数组是一种顺序存储的线性表,所有元素的内存地址是连续的。</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">int</span> <span class="title">fib1</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> array[] = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>&#125;;</span><br><span class="line">        <span class="comment">/*array是一个数组,在栈空间;后面new生成的在堆空间</span></span><br><span class="line"><span class="comment">        也就是说,这里是用一个栈空间的array指向一个堆空间的数组元素</span></span><br><span class="line"><span class="comment">        */</span></span><br><span class="line">        </span><br><span class="line">        <span class="keyword">if</span>(n&lt;=<span class="number">1</span>) <span class="keyword">return</span> n;</span><br><span class="line">        <span class="keyword">return</span> fib1(n-<span class="number">1</span>)+fib1(n-<span class="number">2</span>);</span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>auto生成的数组在所有语言中都有一个共同的缺点：容量无法改变</p>
+<p>这个问题的解决办法是自己写一个动态数组，可以做到如下操作</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">Main</span></span>&#123;</span><br><span class="line">    <span class="function"><span class="keyword">public</span> <span class="keyword">static</span> <span class="keyword">void</span> <span class="title">main</span><span class="params">(String[] args)</span></span>&#123;</span><br><span class="line">        <span class="keyword">int</span> array[] = <span class="keyword">new</span> <span class="keyword">int</span>[] &#123;<span class="number">11</span>,<span class="number">22</span>,<span class="number">33</span>&#125;;</span><br><span class="line">        </span><br><span class="line">        DynamicArray array = <span class="keyword">new</span> DynamicArray();</span><br><span class="line">        array.add(<span class="number">11</span>);<span class="comment">//添加元素</span></span><br><span class="line">        array.add(<span class="number">12</span>);</span><br><span class="line">        array.add(<span class="number">13</span>);</span><br><span class="line">        </span><br><span class="line">        array.remove(<span class="number">0</span>);<span class="comment">//删除0位元素</span></span><br><span class="line">        array.add(<span class="number">2</span>,<span class="number">33</span>);<span class="comment">//向2的位置添加33</span></span><br><span class="line">    &#125;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p>写一个类ArrayList</p>
+<p>需要思考以下问题:</p>
+<ul>
+<li>这个类提供哪些接口给人调用</li>
+<li>提供哪些方法给人去调用</li>
+</ul>
+<h4 id="动态数组-Dynamic-Array-的接口设计"><a href="#动态数组-Dynamic-Array-的接口设计" class="headerlink" title="动态数组(Dynamic Array)的接口设计"></a>动态数组(Dynamic Array)的接口设计</h4><ul>
+<li><code>int size();</code>        //元素的数量</li>
+<li><code>boolean isEmpty();</code>        //是否为空</li>
+<li><code>void add(E element);</code>        //是否包含某元素</li>
+<li><code>E get(int index);</code>        //添加某元素到最后</li>
+<li><code>E set(int index,E element);</code>        //返回index位置的元素</li>
+<li><code>void add(int index, E element);</code>        //向index位置添加元素</li>
+<li><code>E remove(int index);</code></li>
+<li><code>int indexOF(E element);</code></li>
+<li><code>void clear();</code></li>
+</ul>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">public</span> <span class="class"><span class="keyword">class</span> <span class="title">ArrayList</span></span>&#123;</span><br><span class="line">    </span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+
+
+<h3 id="矩阵的压缩存储"><a href="#矩阵的压缩存储" class="headerlink" title="矩阵的压缩存储"></a>矩阵的压缩存储</h3><h4 id="对称矩阵"><a href="#对称矩阵" class="headerlink" title="对称矩阵"></a>对称矩阵</h4><ul>
+<li>存储下三角部分(或上三角部分)</li>
+</ul>
+<blockquote>
+<p>用一个一维数组存储    <strong>sa[n(n+1)/2]</strong></p>
+<blockquote>
+</blockquote>
+</blockquote>
+<h4 id="对角矩阵"><a href="#对角矩阵" class="headerlink" title="对角矩阵"></a>对角矩阵</h4><ul>
+<li>元素只存在于和主对角线平行的区域</li>
+<li>常见的有三对角矩阵、五对角矩阵、七对角矩阵</li>
+<li>用二维数组处理</li>
+</ul>
+<blockquote>
+<p>处理时：</p>
+<ol>
+<li>几对角矩阵</li>
+<li>创建对应数组</li>
+<li>自二维数组横向中线向两端，从主对角线开始存储平行于它的值</li>
+</ol>
+</blockquote>
+<h4 id="稀疏矩阵"><a href="#稀疏矩阵" class="headerlink" title="稀疏矩阵"></a>稀疏矩阵</h4><p>值的存在率（存储密度）小于0.05的矩阵称为稀疏矩阵。</p>
+<ul>
+<li><p>三元组存储（当直观感受空间浪费严重且无规律时，可以使用该方式存储）</p>
+<blockquote>
+<p>M（i，j，a<del>ij</del>）：横坐标，纵坐标，值</p>
+<ul>
+<li>三元组法——链式存储结构（<strong>十字链表</strong>）<ul>
+<li>横坐标，纵坐标，值</li>
+<li>down与right</li>
+<li>行头指针与列头指针</li>
+</ul>
+</li>
+</ul>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span> &#123;</span></span><br><span class="line">	<span class="keyword">int</span> i, j; <span class="comment">//三元组的行列值</span></span><br><span class="line">	ElemType e; </span><br><span class="line"></span><br><span class="line">&#125;Triple;</span><br><span class="line"></span><br><span class="line"><span class="keyword">typedef</span> <span class="class"><span class="keyword">struct</span>&#123;</span></span><br><span class="line">    Triple data;<span class="comment">//成员值</span></span><br><span class="line">    Triple* down;<span class="comment">//同行的下一个元素</span></span><br><span class="line">    Triple* right;<span class="comment">//同列的下一个元素</span></span><br><span class="line"></span><br><span class="line">&#125;OrthogonalList;<span class="comment">//十字链表</span></span><br></pre></td></tr></table></figure>
+
+</blockquote>
+</li>
+</ul>
+
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <p><h4>Copyright © 2020 | Author: Your Name | Theme By <a class="theme-author" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">Page Views: <span id="busuanzi_value_site_pv"></span></span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">Unique Visitors: <span id="busuanzi_value_site_uv"></span></span>
+    
+    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label>
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="NOsswOncKgc8HOxqo9oxIWlX-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="z1FihjWEbS8uIfUQdmCtK7zz">
+
+<script src="/Student-operating.github.io/libs/jquery.min.js"></script>
+
+
+<script src="/Student-operating.github.io/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/Student-operating.github.io/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
