@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        阅零壹
+    </title>
+    <meta name="description" content= 嘿，我是零壹，这里是我的主站，现在只有博客，但是以后会有更多内容 >
+    <meta name="keywords" content= Blog,Hexo,Theme,刘训灼,LiuXunzhuo >
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            《数据结构实验》课程教学大纲
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h3 id="《数据结构实验》课程教学大纲"><a href="#《数据结构实验》课程教学大纲" class="headerlink" title="《数据结构实验》课程教学大纲"></a><strong>《数据结构实验》课程教学大纲</strong></h3><p>本课程大纲依据计算机科学与技术专业、计算机科学与技术（中职生源）专业、数字媒体技术专业、信息管理与信息系统专业2017版人才培养方案制定。</p>
+<p>课程名称：数据结构实验</p>
+<p>课程代码：B103007Z01</p>
+<p>课程管理：计算机工程学院计算机科学与技术教研室</p>
+<p>教学对象：计算机科学与技术专业、计算机科学与技术（中职生源）专业、数字媒体技术专业、信息管理与信息系统专业</p>
+<p>教学时数：总时数16学时，其中理论教学0学时，实验实训16学时</p>
+<p>课程学分：0.5学分</p>
+<p>课程开设学期：第3学期</p>
+<p>计算机科学与技术专业、计算机科学与技术（中职生源）专业为专业必修课（专业主干课程），数字媒体技术专业、信息管理与信息系统专业为学科基础必修课（专业主干课程）</p>
+<p>课程衔接：</p>
+<p>先修课程：C语言程序设计</p>
+<p>   后续课程：算法+程序设计课程设计</p>
+<p><strong>一、课程教学目标及要求</strong></p>
+<p>数据结构是计算机专业的专业基础课程。通过课堂教学、课外练习和上机实习，使学生了解数据对象的特性，数据组织的基本方法，较深入地理解数据的逻辑结构和物理结构，掌握有关算法和基本的程序设计技能，能编制高效且有一定难度的程序，为学习后续课程奠定基础。</p>
+<p>以C语言作为数据结构和算法的描述工具。包括理论教学和实验，教学中注重基础，突出应用，强化数据结构基本知识和程序设计基本能力的双基训练。</p>
+<p>同时，让学生了解国内外IT行业对数据结构的应用，意识到国内科技发展的现状和实力，增强学生对祖国的信心。</p>
+<p><strong>二、实验教学内容与基本要求</strong></p>
+<h2 id="实验一-顺序表"><a href="#实验一-顺序表" class="headerlink" title="实验一 顺序表"></a><strong>实验一</strong> <strong>顺序表</strong></h2><p>1.目的要求</p>
+<p>（1）掌握顺序存储结构的特点；</p>
+<p>（2）掌握顺序存储结构的常见算法。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input checked="" disabled="" type="checkbox">  输入一组整型元素序列，建立顺序表</p>
+<blockquote>
+<p> <strong>随机整型元素序列</strong> </p>
+ <figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">float</span> <span class="title">MyRandow</span><span class="params">(<span class="keyword">int</span> i)</span> </span>&#123;</span><br><span class="line">	<span class="keyword">unsigned</span> <span class="keyword">int</span> times = (<span class="keyword">unsigned</span> <span class="keyword">int</span>)time(<span class="literal">NULL</span>);</span><br><span class="line">	srand(times * (i + <span class="number">1</span>));</span><br><span class="line">	randSeed = rand();</span><br><span class="line">	randSeed = randSeed % <span class="number">100</span>;</span><br><span class="line">	<span class="keyword">return</span> randSeed;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">main</span><span class="params">()</span> </span>&#123;</span><br><span class="line">    <span class="keyword">int</span> len = (<span class="keyword">int</span>)MyRandow(<span class="number">0</span>)%<span class="number">30</span>;</span><br><span class="line">    <span class="keyword">int</span>* <span class="built_in">array</span> = (<span class="keyword">int</span>*)<span class="built_in">calloc</span>(len, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; len; i++) &#123;</span><br><span class="line">        <span class="built_in">array</span>[i] = (<span class="keyword">int</span>)MyRandow(i);</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    toString(<span class="built_in">array</span>, len,<span class="number">0</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+</blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  遍历该顺序表；</p>
+<blockquote>
+<p>遍历顺序表</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">bool</span> <span class="title">toString</span><span class="params">(<span class="keyword">int</span>* <span class="built_in">array</span>, <span class="keyword">int</span> arraySize,<span class="keyword">int</span> pos)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">    <span class="keyword">char</span>* str = <span class="string">&quot;%d,&quot;</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;\n[ &quot;</span>);</span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arraySize; i++) &#123;</span><br><span class="line">        <span class="built_in">printf</span>(str, <span class="built_in">array</span>[i]);</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot; ]\n&quot;</span>);</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure></blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  在该顺序表中进行顺序查找某一元素,查找成功返回1,否则返回0；</p>
+<blockquote>
+<p>查找顺序表中的一个元素</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">ArraySearchElement</span><span class="params">(<span class="keyword">int</span>* <span class="built_in">array</span>, <span class="keyword">int</span> arraySize,<span class="keyword">int</span> e,<span class="keyword">int</span>* index)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arraySize; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (*(<span class="built_in">array</span> + i) == e) &#123;</span><br><span class="line">            *index = i;</span><br><span class="line">            <span class="keyword">return</span> <span class="number">1</span>;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="number">0</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()&#123;</span><br><span class="line">    <span class="comment">/*代码省略*/</span></span><br><span class="line">    <span class="keyword">int</span> e = <span class="number">0</span>; <span class="keyword">int</span> index = <span class="number">0</span>;</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;Enter what you want to find:$ &quot;</span>);</span><br><span class="line">    <span class="built_in">scanf</span>(<span class="string">&quot;%d&quot;</span>, &amp;e);</span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;--&gt; index:%d |  result:%d\n&quot;</span>,\</span><br><span class="line">        index, ArraySearchElement(<span class="built_in">array</span>, len, e, &amp;index));</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/img/202111292217018.png" alt="image-20211129221641284"></p>
+</blockquote>
+</li>
+<li><p><input checked="" disabled="" type="checkbox">  实现把该表中所有奇数排在偶数之前,即表的前面为奇数,后面为偶数；</p>
+<blockquote>
+<ol>
+<li><p>奇数与奇数, 偶数与偶数相对位置不变</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br><span class="line">38</span><br><span class="line">39</span><br><span class="line">40</span><br><span class="line">41</span><br><span class="line">42</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">OE</span><span class="params">(<span class="keyword">int</span>* <span class="built_in">array</span>,<span class="keyword">int</span> arraySize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    <span class="keyword">int</span>* array01 = (<span class="keyword">int</span>*)<span class="built_in">calloc</span>(arraySize, <span class="keyword">sizeof</span>(<span class="keyword">int</span>));</span><br><span class="line">    <span class="keyword">int</span>* tail01 = array01;</span><br><span class="line">    <span class="keyword">int</span>* array02 = (<span class="keyword">int</span>*)<span class="built_in">calloc</span>(arraySize, <span class="keyword">sizeof</span>(<span class="keyword">int</span>)); </span><br><span class="line">    <span class="keyword">int</span>* tail02 = array02;</span><br><span class="line">    <span class="keyword">int</span>* tail = <span class="built_in">array</span>;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i &lt; arraySize; i++) &#123;</span><br><span class="line">        <span class="keyword">if</span> (<span class="built_in">array</span>[i] % <span class="number">2</span> == <span class="number">0</span>) &#123;</span><br><span class="line">            *tail02 = <span class="built_in">array</span>[i];</span><br><span class="line">            tail02++;</span><br><span class="line">        &#125;</span><br><span class="line">        <span class="keyword">else</span> &#123;</span><br><span class="line">            *tail01 = <span class="built_in">array</span>[i];</span><br><span class="line">            tail01++;</span><br><span class="line">        &#125;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (array01 != tail01) &#123;</span><br><span class="line">        *tail = *array01;</span><br><span class="line">        array01++;</span><br><span class="line">        tail++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">while</span> (array02 != tail02) &#123;</span><br><span class="line">        *tail = *array02;</span><br><span class="line">        array02++;</span><br><span class="line">        tail++;</span><br><span class="line">    &#125;</span><br><span class="line"></span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">array</span>;</span><br><span class="line">&#125;<span class="comment">//OE</span></span><br><span class="line"></span><br><span class="line">main()&#123;</span><br><span class="line">    <span class="comment">/*代码省略*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;%d\n&quot;</span>, OE(<span class="built_in">array</span>, len) == <span class="literal">NULL</span> ? <span class="number">0</span> : <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (OE(<span class="built_in">array</span>, len) == <span class="literal">NULL</span> ? <span class="number">0</span> : <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">array</span> = OE(<span class="built_in">array</span>, len);</span><br><span class="line">    &#125;</span><br><span class="line">    toString(<span class="built_in">array</span>, len, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/img/202111300021574.png" alt="image-20211129221514285"></p>
+</li>
+<li><p>奇数对奇数相对递增, 偶数对偶数相对递增</p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">cmpfunc</span><span class="params">(<span class="keyword">const</span> <span class="keyword">void</span>* a, <span class="keyword">const</span> <span class="keyword">void</span>* b)</span></span></span><br><span class="line"><span class="function"></span>&#123;</span><br><span class="line">    <span class="keyword">return</span> (*(<span class="keyword">int</span>*)a - *(<span class="keyword">int</span>*)b);</span><br><span class="line">&#125;</span><br><span class="line"><span class="function"><span class="keyword">int</span>* <span class="title">OEqsort</span><span class="params">(<span class="keyword">int</span>* <span class="built_in">array</span>, <span class="keyword">int</span> arraySize)</span> </span>&#123;</span><br><span class="line">    <span class="keyword">if</span> (<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">NULL</span>;</span><br><span class="line">    qsort(<span class="built_in">array</span>, arraySize, <span class="keyword">sizeof</span>(<span class="keyword">int</span>), cmpfunc);</span><br><span class="line">    <span class="built_in">array</span> = OE(<span class="built_in">array</span>, arraySize);</span><br><span class="line">    <span class="keyword">return</span> <span class="built_in">array</span>;</span><br><span class="line">&#125;</span><br><span class="line"></span><br><span class="line">main()&#123;</span><br><span class="line">    <span class="comment">/*代码省略*/</span></span><br><span class="line">    <span class="built_in">printf</span>(<span class="string">&quot;--&gt; result(OEqsort): %d\n&quot;</span>, OEqsort(<span class="built_in">array</span>, len) == <span class="literal">NULL</span> ? <span class="number">0</span> : <span class="number">1</span>);</span><br><span class="line">    <span class="keyword">if</span> (OEqsort(<span class="built_in">array</span>, len) == <span class="literal">NULL</span> ? <span class="number">0</span> : <span class="number">1</span>) &#123;</span><br><span class="line">        <span class="built_in">array</span> = OEqsort(<span class="built_in">array</span>, len);</span><br><span class="line">    &#125;</span><br><span class="line">    toString(<span class="built_in">array</span>, len, <span class="number">0</span>);</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/img/202111292232824.png" alt="image-20211129223232707"></p>
+</li>
+</ol>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  判断该顺序表中元素是否对称,对称返回1,否则返回0；</p>
+<blockquote>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br></pre></td><td class="code"><pre><span class="line">&gt;<span class="function"><span class="keyword">bool</span> <span class="title">SYM</span><span class="params">(<span class="keyword">int</span>* <span class="built_in">array</span>, <span class="keyword">int</span> arraySize)</span> </span>&#123;</span><br><span class="line">  <span class="keyword">if</span> (<span class="built_in">array</span> == <span class="literal">NULL</span>) <span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line"></span><br><span class="line">  <span class="keyword">for</span> (<span class="keyword">int</span> i = <span class="number">0</span>; i&lt;arraySize; i++) &#123;</span><br><span class="line">      <span class="keyword">if</span> (<span class="built_in">array</span>[i] != <span class="built_in">array</span>[arraySize - <span class="number">1</span> - i])<span class="keyword">return</span> <span class="literal">false</span>;</span><br><span class="line">  &#125;</span><br><span class="line">  </span><br><span class="line">  <span class="keyword">return</span> <span class="literal">true</span>;</span><br><span class="line">&gt;&#125;<span class="comment">//SYM</span></span><br></pre></td></tr></table></figure>
+
+<p><img src="https://gitee.com/tan-huiyu/pic/raw/master/img/202111292251784.png" alt="image-20211129225148654"></p>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  输入整型元素序列利用有序表插入算法建立一个有序表；</p>
+<blockquote>
+</blockquote>
+</li>
+<li><p><input disabled="" type="checkbox">  利用实验内容（6）建立两个递增有序表并把它们合并成一个递增有序表。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）顺序表的建立及插入、删除运算</p>
+<p>（2）有序表的建立与插入运算</p>
+<h2 id="实验二-单向链表"><a href="#实验二-单向链表" class="headerlink" title="实验二 单向链表"></a><strong>实验二</strong> <strong>单向链表</strong></h2><p>1.目的要求</p>
+<p>（1）掌握单向链表的存储特点；</p>
+<p>（2）掌握单向链表的建立、插入、删除算法及其应用算法的程序实现。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  随机产生或键盘输入一组整型元素，建立一个带头结点的单向链表（无序）；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  遍历单向链表；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  把单向链表中元素逆置（不允许申请新的结点空间）；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  在单向链表中删除所有的偶数元素结点；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  编写在递增有序链表中插入一个元素使链表元素仍有序的函数，并利用该函数建立一个非递减有序单向链表；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  利用实验内容（5）建立两个递增有序单向链表，然后合并成一个递增链表；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  利用实验内容（1）建立的链表，实现将其分解成两个链表，其中一个全部为奇数，另一个全部为偶数（尽量利用已知的存储空间）。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）单链表的建立及相关运算</p>
+<p>（2）有序单链表的建立及相关运算</p>
+<h2 id="实验三-栈"><a href="#实验三-栈" class="headerlink" title="实验三 栈"></a><strong>实验三</strong> <strong>栈</strong></h2><p>1.目的要求</p>
+<p>（1）掌握栈的思想及其存储实现；</p>
+<p>（2）掌握栈的常见算法的程序实现。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  采用链式存储实现栈的初始化、入栈、出栈操作；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  采用顺序存储实现栈的初始化、入栈、出栈操作；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  在主函数中设计一个简单的菜单，分别测试上述算法。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）栈的建立及相关操作</p>
+<h2 id="实验四-队列"><a href="#实验四-队列" class="headerlink" title="实验四 队列"></a><strong>实验四</strong> <strong>队列</strong></h2><p>1.目的要求</p>
+<p>（1）掌握队列的思想及其存储实现；</p>
+<p>（2）掌握队列的常见算法的程序实现。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  采用链式存储实现队列的初始化、入队、出队操作；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  采用顺序存储实现队列的初始化、入队、出队操作；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  在主函数中设计一个简单的菜单，分别测试上述算法。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）队列的建立及相关操作</p>
+<h2 id="实验五-二叉树"><a href="#实验五-二叉树" class="headerlink" title="实验五 二叉树"></a><strong>实验五</strong> <strong>二叉树</strong></h2><p>1.目的要求</p>
+<p>（1）掌握二叉树的存储实现；</p>
+<p>（2）掌握二叉树的遍历思想；</p>
+<p>（3）掌握二叉树常见算法的程序实现。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  输入字符序列，建立二叉链表；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  中序遍历二叉树:递归算法；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  中序遍历二叉树:非递归算法；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  求二叉树的高度；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  求二叉树的叶子个数；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  借助队列实现二叉树的层次遍历；</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）二叉树的建立</p>
+<p>（2）二叉树的遍历</p>
+<h2 id="实验六-图"><a href="#实验六-图" class="headerlink" title="实验六 图"></a><strong>实验六</strong> <strong>图</strong></h2><p>1.目的要求</p>
+<p>（1）掌握图的基本存储方法；</p>
+<p>（2）熟练掌握图的两种搜索路径的遍历方法。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  键盘输入数据，建立一个无向图的邻接矩阵；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  完成无向图的邻接矩阵存储的深度优先遍历和广度优先遍历；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  键盘输入数据，建立一个有向图的邻接表；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  完成有向图的邻接表存储的深度优先遍历和广度优先遍历。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）图的两种存储结构的建立</p>
+<p>（2）图的遍历</p>
+<h2 id="实验七-查找"><a href="#实验七-查找" class="headerlink" title="实验七 查找"></a><strong>实验七</strong> <strong>查找</strong></h2><p>1.目的要求</p>
+<p>（1）掌握折半查找算法的思想及程序实现；</p>
+<p>（2）掌握二叉排序树的查找、插入、删除、建立算法的思想及程序实现；</p>
+<p>（3）掌握散列存储结构的思想，能选择合适散列函数，实现不同冲突处理方法的散列表的查找、建立。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  用随机函数产生一组整型数，给定一个关键字用顺序查找的方法查找该关键字是否存在；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  利用实验一中建立有序表，采用折半查找实现某一已知的关键字的查找；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  设有关键字序列，要求进行哈希表类编程设计：</p>
+</li>
+</ul>
+<blockquote>
+<p>①采用除留余数法构造哈希函数，采用线性探查法解决哈希冲突；</p>
+<p>②实现哈希表中关键字的查找。</p>
+</blockquote>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）二叉排序树的建立与查找</p>
+<p>（2）哈希表查找</p>
+<h2 id="实验八-排序"><a href="#实验八-排序" class="headerlink" title="实验八 排序"></a><strong>实验八</strong> <strong>排序</strong></h2><p>1.目的要求</p>
+<p>（1）常见的排序算法的思想及其适用条件；</p>
+<p>（2）常见的排序算法的程序实现。</p>
+<p>2.实验内容（可参考以下内容）</p>
+<ul>
+<li><p><input disabled="" type="checkbox">  实现简单选择排序、直接插入排序和冒泡排序；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  实现希尔排序算法；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  实现快速排序算法；</p>
+</li>
+<li><p><input disabled="" type="checkbox">  实现堆排序算法。</p>
+</li>
+</ul>
+<p>3.所需实验设施设备</p>
+<p>计算机</p>
+<p>4.教学形式及过程</p>
+<p>（1）教师演示</p>
+<p>（2）学生实践、教师指导</p>
+<p>5.教学重点与难点</p>
+<p>（1）简单选择排序、直接插入排序和冒泡排序</p>
+<p>（2）堆排序算法</p>
+<p><strong>四、****实验项目及学时分配</strong></p>
+<table>
+<thead>
+<tr>
+<th>序号</th>
+<th>实验项目名称</th>
+<th>实验学时</th>
+<th>每组人数</th>
+<th>实验属性</th>
+<th>实验类别</th>
+<th>实验要求</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>1</td>
+<td>顺序表</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>2</td>
+<td>单链表</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>3</td>
+<td>栈</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>4</td>
+<td>队列</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>5</td>
+<td>二叉树</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>6</td>
+<td>图</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>7</td>
+<td>查找</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+<tr>
+<td>8</td>
+<td>排序</td>
+<td>2</td>
+<td>1</td>
+<td>专业类</td>
+<td>验证性</td>
+<td>必做</td>
+</tr>
+</tbody></table>
+<p><strong>五、课程考核</strong></p>
+<p><strong>（一）考核方式</strong></p>
+<p>1.考查。</p>
+<p><strong>（二）成绩评定</strong></p>
+<p>1.成绩构成：平时成绩与期末考核成绩按比例计算总评成绩。</p>
+<p>2.说明：平时成绩与期末考核折算比例、平时成绩构成及折算比例由任课教师提出具体方案，教研室审核确定。</p>
+<p><strong>六、教学参考书</strong></p>
+<p>1.李素若，陈万华，游明坤著.数据结构.北京：中国水利水电出版社，2014年7月.</p>
+<p>2.严蔚敏，李冬梅，吴伟明编著. 数据结构.北京：人民邮电出版社. 2011年1月.</p>
+
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <p><h4>Copyright © 2020 | Author: Your Name | Theme By <a class="theme-author" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">Page Views: <span id="busuanzi_value_site_pv"></span></span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">Unique Visitors: <span id="busuanzi_value_site_uv"></span></span>
+    
+    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label>
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="black">
+<input type="hidden" id="valine_appid" value="NOsswOncKgc8HOxqo9oxIWlX-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="z1FihjWEbS8uIfUQdmCtK7zz">
+
+<script src="/Student-operating.github.io/libs/jquery.min.js"></script>
+
+
+<script src="/Student-operating.github.io/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/Student-operating.github.io/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
