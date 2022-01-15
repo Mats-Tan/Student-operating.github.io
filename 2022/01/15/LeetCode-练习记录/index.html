@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="renderer" content="webkit">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta name="google-site-verification" content="TZE0rZyIqLl10trYu3BWBWa1Vmz6HFwhb2OcNEK4u-s" />
+     <link rel="shortcut icon" href= /img/favicon.ico >
+    <title>
+        阅零壹
+    </title>
+    <meta name="description" content= 嘿，我是零壹，这里是我的主站，现在只有博客，但是以后会有更多内容 >
+    <meta name="keywords" content= Blog,Hexo,Theme,刘训灼,LiuXunzhuo >
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/highlight/styles/monokai-sublime.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/libs/font-awesome/css/font-awesome.min.css">
+
+    
+<link rel="stylesheet" href="/Student-operating.github.io/css/style.css">
+
+<meta name="generator" content="Hexo 5.4.0"></head>
+<body id="bodyx">
+    <div class="hd posts">
+    <a href="/index.html"><i class="fa fa-home
+ replay-btn" aria-hidden="true"></i></a>
+    <div class="post-title">
+        <p>
+            LeetCode 练习记录
+        </p>
+        <hr>
+    </div>
+    <div class="post-content">
+        <h1 id="寒假leetcode练习记录"><a href="#寒假leetcode练习记录" class="headerlink" title="寒假leetcode练习记录"></a>寒假leetcode练习记录</h1><h2 id="第一天"><a href="#第一天" class="headerlink" title="第一天"></a>第一天</h2><h3 id="1716-计算力扣银行的钱"><a href="#1716-计算力扣银行的钱" class="headerlink" title="1716. 计算力扣银行的钱"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/calculate-money-in-leetcode-bank/">1716. 计算力扣银行的钱</a></h3><blockquote>
+<p>Hercy 想要为购买第一辆车存钱。他 每天 都往力扣银行里存钱。</p>
+<p>最开始，他在周一的时候存入 1 块钱。从周二到周日，他每天都比前一天多存入 1 块钱。在接下来每一个周一，他都会比 前一个周一 多存入 1 块钱。</p>
+<p>给你 n ，请你返回在第 n 天结束的时候他在力扣银行总共存了多少块钱。</p>
+<blockquote>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 4</span><br><span class="line">输出：10</span><br><span class="line">解释：第 4 天后，总额为 1 + 2 + 3 + 4 = 10 。</span><br></pre></td></tr></table></figure>
+
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 10</span><br><span class="line">输出：37</span><br><span class="line">解释：第 10 天后，总额为 (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4) = 37 。注意到第二个星期一，Hercy 存入 2 块钱。</span><br></pre></td></tr></table></figure>
+
+<p>示例 3：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：n = 20</span><br><span class="line">输出：96</span><br><span class="line">解释：第 20 天后，总额为 (1 + 2 + 3 + 4 + 5 + 6 + 7) + (2 + 3 + 4 + 5 + 6 + 7 + 8) + (3 + 4 + 5 + 6 + 7 + 8) = 96 。</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<p><strong>C语言实现</strong></p>
+<figure class="highlight c"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br></pre></td><td class="code"><pre><span class="line"><span class="function"><span class="keyword">int</span> <span class="title">totalMoney</span><span class="params">(<span class="keyword">int</span> n)</span></span>&#123;</span><br><span class="line">    <span class="keyword">int</span> day_one = <span class="number">1</span>;</span><br><span class="line">    <span class="keyword">int</span> all = <span class="number">0</span>;</span><br><span class="line">    <span class="keyword">int</span> week = n/<span class="number">7</span>;</span><br><span class="line">    <span class="keyword">int</span> otherday = n%<span class="number">7</span>;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> i=<span class="number">0</span>;i&lt;week;i++)&#123;</span><br><span class="line">        <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;<span class="number">7</span>;j++)&#123;</span><br><span class="line">            all +=day_one+j;</span><br><span class="line">        &#125;</span><br><span class="line">        day_one++;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">for</span>(<span class="keyword">int</span> j=<span class="number">0</span>;j&lt;otherday;j++)&#123;</span><br><span class="line">        all += day_one+j;</span><br><span class="line">    &#125;</span><br><span class="line">    <span class="keyword">return</span> all;</span><br><span class="line">&#125;</span><br></pre></td></tr></table></figure>
+
+<h3 id="1717-删除子字符串的最大得分"><a href="#1717-删除子字符串的最大得分" class="headerlink" title="1717. 删除子字符串的最大得分"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/maximum-score-from-removing-substrings/">1717. 删除子字符串的最大得分</a></h3><blockquote>
+<p>给你一个字符串 s 和两个整数 x 和 y 。你可以执行下面两种操作任意次。</p>
+<p>删除子字符串 “ab” 并得到 x 分。<br>比方说，从 “cabxbae” 删除 ab ，得到 “cxbae” 。<br>删除子字符串”ba” 并得到 y 分。<br>比方说，从 “cabxbae” 删除 ba ，得到 “cabxe” 。<br>请返回对 s 字符串执行上面操作若干次能得到的最大得分。</p>
+<blockquote>
+<p>示例 1：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;cdbcbbaaabab&quot;, x = 4, y = 5</span><br><span class="line">输出：19</span><br><span class="line">解释：</span><br><span class="line"></span><br><span class="line">删除 &quot;cdbcbbaaabab&quot; 中加粗的 &quot;ba&quot; ，得到 s = &quot;cdbcbbaaab&quot; ，加 5 分。</span><br><span class="line"></span><br><span class="line">删除 &quot;cdbcbbaaab&quot; 中加粗的 &quot;ab&quot; ，得到 s = &quot;cdbcbbaa&quot; ，加 4 分。</span><br><span class="line"></span><br><span class="line">删除 &quot;cdbcbbaa&quot; 中加粗的 &quot;ba&quot; ，得到 s = &quot;cdbcba&quot; ，加 5 分。</span><br><span class="line"></span><br><span class="line">删除 &quot;cdbcba&quot; 中加粗的 &quot;ba&quot; ，得到 s = &quot;cdbc&quot; ，加 5 分。</span><br><span class="line">总得分为 5 + 4 + 5 + 5 = 19 。</span><br></pre></td></tr></table></figure>
+
+<p>示例 2：</p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;aabbaaxybbaabb&quot;, x = 5, y = 4</span><br><span class="line">输出：20</span><br><span class="line">提示：</span><br><span class="line">1 &lt;= s.length &lt;= 105</span><br><span class="line">1 &lt;= x, y &lt;= 104</span><br><span class="line">s 只包含小写英文字母。</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<h3 id="5-最长回文子串"><a href="#5-最长回文子串" class="headerlink" title="5. 最长回文子串"></a><a target="_blank" rel="noopener" href="https://leetcode-cn.com/problems/longest-palindromic-substring/">5. 最长回文子串</a></h3><blockquote>
+<p>给你一个字符串 <code>s</code>，找到 <code>s</code> 中最长的回文子串。</p>
+<blockquote>
+<p><strong>示例 1：</strong></p>
+<figure class="highlight plaintext"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">输入：s = &quot;babad&quot;</span><br><span class="line">输出：&quot;bab&quot;</span><br><span class="line">解释：&quot;aba&quot; 同样是符合题意的答案。</span><br></pre></td></tr></table></figure>
+</blockquote>
+</blockquote>
+<p>思路：设置两个字符栈（加载栈和期待栈），记录每组子串的开头，当存在回文时，期待栈期待被满足，记录这组回文栈的起始点和大小 <code>&lt;address,size&gt;</code> ,当遇到其他回文栈时比较大小，如果大于当前存储的栈，则替换内容，否则保持不变。</p>
+
+    </div>
+
+    
+</div>
+    <div class="footer" id="footer">
+    <p><h4>Copyright © 2020 | Author: Your Name | Theme By <a class="theme-author" href="https://github.com/Xunzhuo/hexo-theme-coder" style="font-size:14px; color: #969696">Coder</a></h4>
+    
+        <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
+        <span id="busuanzi_container_site_pv">Page Views: <span id="busuanzi_value_site_pv"></span></span>
+        <span class="post-meta-divider">|</span>
+        <span id="busuanzi_container_site_uv">Unique Visitors: <span id="busuanzi_value_site_uv"></span></span>
+    
+    <label class="el-switch el-switch-blue el-switch-sm" style="vertical-align: sub;">
+        <input type="checkbox" name="switch" id="update_style">
+        <span class="el-switch-style"></span>
+    </label>
+
+    <!--         <script type="text/javascript">
+    var cnzz_protocol = (("https:" == document.location.protocol) ? "https://" : "http://");
+    document.write(unescape("%3Cspan id='cnzz_stat_icon_1278548644'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "v1.cnzz.com/stat.php%3Fid%3D1278548644%26show%3Dpic1' type='text/javascript'%3E%3C/script%3E"));
+    </script> -->
+</p>
+</div>
+
+<input type="hidden" id="web_style" value="light">
+<input type="hidden" id="valine_appid" value="NOsswOncKgc8HOxqo9oxIWlX-gzGzoHsz">
+<input type="hidden" id="valine_appKey" value="z1FihjWEbS8uIfUQdmCtK7zz">
+
+<script src="/Student-operating.github.io/libs/jquery.min.js"></script>
+
+
+<script src="/Student-operating.github.io/libs/highlight/highlight.pack.js"></script>
+
+<script src='//cdn.jsdelivr.net/npm/valine@1.3.10/dist/Valine.min.js'></script>
+
+<script src="/Student-operating.github.io/js/js.js"></script>
+
+<style type="text/css">
+.v * {
+color: #698fca;
+}
+.v .vlist .vcard .vhead .vsys {
+color: #3a3e4a;
+}
+.v .vlist .vcard .vh .vmeta .vat {
+color: #638fd5;
+}
+.v .vlist .vcard .vhead .vnick {
+color: #6ba1ff;
+}
+.v a {
+color: #8696b1;
+}
+.v .vlist .vcard .vhead .vnick:hover {
+color: #669bfc;
+}
+</style>
+    <script type="text/javascript" color="173,174,173" opacity='1' zIndex="-2" count="99" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+</body>
+</html>
